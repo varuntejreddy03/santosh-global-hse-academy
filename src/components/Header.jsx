@@ -31,46 +31,46 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
       {/* Top micro-bar: NEBOSH-style Deep Navy Blue Bar */}
-      <div className="bg-[#002b7f] text-white py-2 px-4 text-xs">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-4">
-            <span className="inline-flex items-center gap-2 font-medium">
+      <div className="bg-[#002b7f] text-white py-1.5 sm:py-2 px-3 sm:px-4 text-xs w-full max-w-full overflow-hidden">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 sm:gap-4 overflow-hidden min-w-0">
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 font-medium shrink-0">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
               </span>
-              <span>24/7 Operations Desk</span>
+              <span className="text-[11px] sm:text-xs font-semibold whitespace-nowrap">24/7 Operations Desk</span>
             </span>
-            <span className="hidden sm:inline-block text-[#53bbdf]">•</span>
-            <span className="inline-flex items-center gap-1.5 text-slate-100">
-              <Globe className="w-3.5 h-3.5 text-[#81ccdd]" />
-              Worldwide Training Accessibility
+            <span className="text-[#53bbdf] shrink-0">•</span>
+            <span className="inline-flex items-center gap-1.5 text-slate-100 text-[11px] sm:text-xs truncate">
+              <Globe className="w-3.5 h-3.5 text-[#81ccdd] shrink-0" />
+              <span className="truncate">Worldwide Accessibility</span>
             </span>
           </div>
-          <div className="hidden md:flex items-center gap-3 text-slate-200 text-[11px] font-medium">
+          <div className="hidden md:flex items-center gap-3 text-slate-200 text-[11px] font-medium shrink-0">
             <span>Specialised Occupational Health &amp; Safety Academy</span>
           </div>
         </div>
       </div>
 
       {/* Main Navigation Bar (Clean White Background) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 w-full max-w-full">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
           
           {/* Brand Logo */}
           <button 
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3.5 text-left group focus:outline-none cursor-pointer"
+            className="flex items-center gap-2.5 sm:gap-3.5 text-left group focus:outline-none cursor-pointer min-w-0 shrink"
           >
-            <div className="w-11 h-11 rounded-lg bg-[#002b7f] flex items-center justify-center shadow-md group-hover:bg-[#001f5c] transition-colors flex-shrink-0">
-              <ShieldCheck className="w-6 h-6 text-white stroke-[2.4]" />
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-[#002b7f] flex items-center justify-center shadow-md group-hover:bg-[#001f5c] transition-colors shrink-0">
+              <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-[2.4]" />
             </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-extrabold tracking-tight text-[#002b7f]">
+            <div className="min-w-0">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-[#002b7f]">
                   SANTOSH
                 </span>
-                <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-[#f0f7fb] text-[#002b7f] font-bold border border-[#cfe5ee]">
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider px-1.5 sm:px-2 py-0.5 rounded bg-[#f0f7fb] text-[#002b7f] font-bold border border-[#cfe5ee] shrink-0">
                   ACADEMY
                 </span>
               </div>
@@ -104,10 +104,10 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
           </nav>
 
           {/* CTA & Mobile Controls */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <button
               onClick={() => onOpenEnquireModal()}
-              className="hidden sm:inline-flex btn-primary text-xs py-2.5 px-4.5"
+              className="hidden md:inline-flex btn-primary text-xs py-2.5 px-4"
             >
               <span>Enquire Now</span>
               <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
@@ -116,7 +116,7 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:text-[#002b7f] hover:bg-slate-200 lg:hidden border border-slate-200 focus:outline-none cursor-pointer"
+              className="p-2 sm:p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:text-[#002b7f] hover:bg-slate-200 lg:hidden border border-slate-200 focus:outline-none cursor-pointer shrink-0"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

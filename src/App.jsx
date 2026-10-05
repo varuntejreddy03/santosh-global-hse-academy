@@ -106,7 +106,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-800 relative">
+    <div className="min-h-screen flex flex-col bg-white text-slate-800 relative w-full max-w-full overflow-x-hidden">
       {/* Scroll Progress Bar at the very top */}
       <ScrollProgressBar />
 

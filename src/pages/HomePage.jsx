@@ -38,31 +38,29 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
   const ActiveIcon = iconMap[activeDiscipline.iconName] || ShieldCheck;
 
   return (
-    <div className="space-y-24 pb-24 bg-white overflow-hidden">
+    <div className="space-y-14 sm:space-y-24 pb-16 sm:pb-24 bg-white overflow-hidden w-full max-w-full">
       
       {/* 1. HERO SECTION (Authoritative, Prestigious Institutional Aesthetic) */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#eef6fa]/80 via-[#f8fafc] to-white nebosh-grid-bg pt-10 pb-20 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#eef6fa]/80 via-[#f8fafc] to-white nebosh-grid-bg pt-6 sm:pt-10 pb-12 sm:pb-20 border-b border-slate-200 w-full max-w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             
             {/* Left Column: Hero Content (7 cols) */}
-            <div className="lg:col-span-7 space-y-6 text-left">
+            <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-left min-w-0">
               
               {/* Institutional Accreditation Pill */}
-              <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-2xl sm:rounded-full bg-white border border-[#cfe5ee] text-xs font-semibold text-[#002b7f] shadow-sm">
-                <span className="relative flex h-2 w-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#cfe5ee] text-xs font-semibold text-[#002b7f] shadow-sm max-w-full overflow-hidden">
+                <span className="relative flex h-2 w-2 shrink-0">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span className="font-bold text-[#002b7f]">24/7 Operations Desk</span>
-                <span className="text-slate-300 hidden sm:inline">•</span>
-                <span className="text-slate-600 hidden sm:inline">Specialised OHS Academy</span>
+                <span className="font-bold text-[#002b7f] truncate">24/7 Operations Desk</span>
                 <span className="text-slate-300">•</span>
-                <span className="text-[#0083A9] font-bold">Worldwide Access</span>
+                <span className="text-[#0083A9] font-bold truncate">Worldwide Access</span>
               </div>
 
               {/* Exact Requested Headline */}
-              <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-[#002b7f] leading-[1.18] sm:leading-[1.14]">
+              <h1 className="text-2xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-[#002b7f] leading-[1.2] sm:leading-[1.14]">
                 Building Safer Workplaces Through{' '}
                 <span className="text-[#0083A9]">
                   Professional HSE Training
@@ -70,18 +68,18 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
               </h1>
 
               {/* Exact Requested Supporting Text */}
-              <p className="text-base sm:text-lg text-slate-600 max-w-2xl font-normal leading-relaxed">
+              <p className="text-sm sm:text-lg text-slate-600 max-w-2xl font-normal leading-relaxed">
                 Practical, professional and accessible occupational health and safety training designed for professionals and organisations worldwide.
               </p>
 
               {/* Refined Institutional Buttons */}
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <button
                   onClick={() => {
                     setCurrentPage('courses');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="btn-primary group"
+                  className="btn-primary group w-full sm:w-auto"
                 >
                   <span>Explore Training</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -92,45 +90,45 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
                     setCurrentPage('contact');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="btn-secondary"
+                  className="btn-secondary w-full sm:w-auto"
                 >
                   <span>Contact Us</span>
                 </button>
               </div>
 
               {/* Key Trust Signals Bar */}
-              <div className="pt-6 border-t border-slate-200/90 grid grid-cols-2 sm:grid-cols-3 gap-3.5">
-                <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 flex items-center gap-3 shadow-sm hover:border-[#002b7f]/40 transition-colors">
-                  <div className="w-10 h-10 rounded-lg bg-[#e8f2f8] flex items-center justify-center text-[#002b7f] flex-shrink-0">
-                    <Clock className="w-5 h-5 stroke-[2.2]" />
+              <div className="pt-5 border-t border-slate-200/90 grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3.5">
+                <div className="p-2.5 sm:p-3.5 rounded-xl bg-white border border-slate-200/80 flex items-center gap-2.5 sm:gap-3 shadow-sm hover:border-[#002b7f]/40 transition-colors min-w-0">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#e8f2f8] flex items-center justify-center text-[#002b7f] shrink-0">
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <div>
-                    <span className="font-bold text-[#002b7f] block text-sm">
+                  <div className="min-w-0 truncate">
+                    <span className="font-bold text-[#002b7f] block text-xs sm:text-sm truncate">
                       <CountUpNumber end={24} suffix="/7" /> Hours
                     </span>
-                    <span className="text-slate-500 text-xs">Continuous Support</span>
+                    <span className="text-slate-500 text-[10px] sm:text-xs truncate block">Continuous Support</span>
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 flex items-center gap-3 shadow-sm hover:border-[#002b7f]/40 transition-colors">
-                  <div className="w-10 h-10 rounded-lg bg-[#e8f2f8] flex items-center justify-center text-[#002b7f] flex-shrink-0">
-                    <Globe2 className="w-5 h-5 stroke-[2.2]" />
+                <div className="p-2.5 sm:p-3.5 rounded-xl bg-white border border-slate-200/80 flex items-center gap-2.5 sm:gap-3 shadow-sm hover:border-[#002b7f]/40 transition-colors min-w-0">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#e8f2f8] flex items-center justify-center text-[#002b7f] shrink-0">
+                    <Globe2 className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <div>
-                    <span className="font-bold text-[#002b7f] block text-sm">Worldwide</span>
-                    <span className="text-slate-500 text-xs">Global Delivery</span>
+                  <div className="min-w-0 truncate">
+                    <span className="font-bold text-[#002b7f] block text-xs sm:text-sm truncate">Worldwide</span>
+                    <span className="text-slate-500 text-[10px] sm:text-xs truncate block">Global Delivery</span>
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 flex items-center gap-3 shadow-sm col-span-2 sm:col-span-1 hover:border-[#002b7f]/40 transition-colors">
-                  <div className="w-10 h-10 rounded-lg bg-[#e8f2f8] flex items-center justify-center text-[#002b7f] flex-shrink-0">
-                    <ShieldCheck className="w-5 h-5 stroke-[2.2]" />
+                <div className="p-2.5 sm:p-3.5 rounded-xl bg-white border border-slate-200/80 flex items-center gap-2.5 sm:gap-3 shadow-sm col-span-2 sm:col-span-1 hover:border-[#002b7f]/40 transition-colors min-w-0">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#e8f2f8] flex items-center justify-center text-[#002b7f] shrink-0">
+                    <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
                   </div>
-                  <div>
-                    <span className="font-bold text-[#002b7f] block text-sm">
+                  <div className="min-w-0 truncate">
+                    <span className="font-bold text-[#002b7f] block text-xs sm:text-sm truncate">
                       <CountUpNumber end={6} suffix=" Disciplines" />
                     </span>
-                    <span className="text-slate-500 text-xs">Core OHS Modules</span>
+                    <span className="text-slate-500 text-[10px] sm:text-xs truncate block">Core OHS Modules</span>
                   </div>
                 </div>
               </div>
@@ -138,11 +136,11 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
             </div>
 
             {/* Right Column: Hero Visual Frame (5 cols) */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200/90 bg-white shadow-xl nebosh-card group">
+            <div className="lg:col-span-5 relative w-full min-w-0">
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200/90 bg-white shadow-xl nebosh-card group w-full">
                 
                 {/* Visual Image with High-End Overlay */}
-                <div className="relative h-[360px] sm:h-[420px] overflow-hidden bg-[#001f5c]">
+                <div className="relative h-60 sm:h-[400px] overflow-hidden bg-[#001f5c] w-full">
                   <img
                     src="/images/santosh_hero_3d.jpg"
                     alt="SANTOSH Professional Occupational Safety Academy Training Center"
@@ -151,30 +149,30 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
                       e.currentTarget.src = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80";
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#001f5c]/95 via-[#001f5c]/25 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#001f5c]/95 via-[#001f5c]/30 to-transparent"></div>
                   
                   {/* Subtle Institutional Badge */}
-                  <div className="absolute top-4 left-4 inline-flex items-center gap-2 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-200/90 text-xs font-bold text-[#002b7f] shadow-md">
-                    <HardHat className="w-4 h-4 text-[#0083A9]" />
+                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4 inline-flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg border border-slate-200/90 text-[11px] sm:text-xs font-bold text-[#002b7f] shadow-md">
+                    <HardHat className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#0083A9]" />
                     <span>Specialised OHS Academy</span>
                   </div>
 
                   {/* Bottom Information Annotation */}
-                  <div className="absolute bottom-5 left-5 right-5 text-white space-y-1.5">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#81ccdd] font-mono">
+                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 text-white space-y-1">
+                    <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#81ccdd] font-mono">
                       ACCREDITED CURRICULUM
                     </span>
-                    <h3 className="text-lg font-bold leading-snug text-white">
-                      Specialised Academy for NextGen Trainings in Occupational Health and Safety
+                    <h3 className="text-sm sm:text-lg font-bold leading-snug text-white">
+                      NextGen Trainings in OHS
                     </h3>
-                    <p className="text-xs text-slate-200 line-clamp-2 font-normal leading-relaxed">
+                    <p className="text-[11px] sm:text-xs text-slate-200 line-clamp-2 font-normal leading-relaxed hidden sm:block">
                       Structured learning across occupational risk assessment, fire prevention, life safety, and management governance.
                     </p>
                   </div>
                 </div>
 
                 {/* Overlaid Card Information Footer */}
-                <div className="p-4 sm:p-5 bg-white flex items-center justify-between border-t border-slate-100">
+                <div className="p-3.5 sm:p-4 bg-white flex items-center justify-between border-t border-slate-100">
                   <button
                     onClick={() => onOpenEnquireModal('HSE Training')}
                     className="text-xs font-bold text-[#002b7f] hover:text-[#0083A9] flex items-center gap-1.5 cursor-pointer group/link"
@@ -182,7 +180,7 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
                     <span>Enquire for Your Workforce</span>
                     <ArrowUpRight className="w-4 h-4 group-link:translate-x-0.5 group-link:-translate-y-0.5 transition-transform" />
                   </button>
-                  <span className="text-slate-400 font-mono text-[11px] font-medium px-2 py-0.5 rounded bg-slate-100 border border-slate-200/60">
+                  <span className="text-slate-400 font-mono text-[10px] sm:text-[11px] font-medium px-2 py-0.5 rounded bg-slate-100 border border-slate-200/60">
                     SAN-OHS
                   </span>
                 </div>
@@ -196,8 +194,8 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
 
       {/* 2. SHORT SANTOSH INTRODUCTION */}
       <RevealOnScroll animation="fade-up">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-[#f0f7fb] border border-[#cfe5ee] p-8 lg:p-12 relative overflow-hidden shadow-sm hover:border-[#002b7f]/30 transition-all">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full">
+          <div className="rounded-2xl bg-[#f0f7fb] border border-[#cfe5ee] p-5 sm:p-8 lg:p-12 relative overflow-hidden shadow-sm hover:border-[#002b7f]/30 transition-all w-full max-w-full">
             <div className="max-w-3xl space-y-4">
               <div className="inline-flex items-center gap-2 text-xs font-bold text-[#0083A9] tracking-wider uppercase font-mono">
                 <ShieldCheck className="w-4 h-4 text-[#002b7f]" />

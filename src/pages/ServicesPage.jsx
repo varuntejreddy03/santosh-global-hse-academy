@@ -24,7 +24,7 @@ const iconMap = {
 
 export default function ServicesPage({ setCurrentPage, onOpenEnquireModal }) {
   return (
-    <div className="space-y-24 pb-24 pt-6 bg-white overflow-hidden">
+    <div className="space-y-16 sm:space-y-24 pb-16 sm:pb-24 pt-4 sm:pt-6 bg-white overflow-hidden w-full max-w-full">
       
       {/* 1. PAGE HEADER */}
       <section className="relative py-16 bg-gradient-to-b from-[#eef6fa]/80 to-[#ffffff] border-b border-slate-200 nebosh-grid-bg overflow-hidden">

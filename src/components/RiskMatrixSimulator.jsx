@@ -139,11 +139,11 @@ export default function RiskMatrixSimulator({ onOpenEnquireModal }) {
   };
 
   return (
-    <div className="rounded-3xl bg-white border border-slate-200/90 shadow-xl overflow-hidden nebosh-card">
+    <div className="rounded-3xl bg-white border border-slate-200/90 shadow-xl overflow-hidden nebosh-card w-full max-w-full">
       
       {/* Top Header Bar */}
-      <div className="bg-[#002b7f] text-white p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#001f5c]">
-        <div className="space-y-1.5">
+      <div className="bg-[#002b7f] text-white p-5 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#001f5c] w-full max-w-full">
+        <div className="space-y-1.5 min-w-0">
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-0.5 rounded-full bg-[#53bbdf]/20 text-[#81ccdd] border border-[#53bbdf]/30 text-[11px] font-mono font-bold uppercase tracking-wider">
               Interactive OHS Tool
@@ -152,7 +152,7 @@ export default function RiskMatrixSimulator({ onOpenEnquireModal }) {
               ISO 45001 / British HSE Standard Matrix
             </span>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
             5×5 Workplace Risk Assessment Simulator
           </h3>
           <p className="text-xs sm:text-sm text-slate-200 max-w-2xl font-normal leading-relaxed">
@@ -160,8 +160,8 @@ export default function RiskMatrixSimulator({ onOpenEnquireModal }) {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
-          <div className="px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-right">
+        <div className="flex items-center gap-3 shrink-0">
+          <div className="px-4 py-2 rounded-xl bg-white/10 border border-white/20 text-left sm:text-right">
             <span className="text-[10px] text-slate-300 font-mono uppercase block">Calculated Rating</span>
             <span className="text-2xl font-extrabold text-white font-mono leading-none">
               {score} <span className="text-xs text-slate-300 font-normal">/ 25</span>
@@ -171,20 +171,20 @@ export default function RiskMatrixSimulator({ onOpenEnquireModal }) {
       </div>
 
       {/* Preset Scenario Selector Buttons */}
-      <div className="bg-[#f0f7fb] border-b border-[#cfe5ee] px-6 py-3.5">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2.5">
-          <span className="text-xs font-bold text-[#002b7f] font-mono uppercase flex items-center gap-1.5 flex-shrink-0">
+      <div className="bg-[#f0f7fb] border-b border-[#cfe5ee] px-4 sm:px-6 py-3.5 w-full max-w-full overflow-hidden">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2.5 min-w-0">
+          <span className="text-xs font-bold text-[#002b7f] font-mono uppercase flex items-center gap-1.5 shrink-0">
             <Sliders className="w-3.5 h-3.5 text-[#0083A9]" />
             Test Scenarios:
           </span>
-          <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-thin">
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-thin max-w-full">
             {PRESETS.map((preset) => {
               const isSelected = activePreset === preset.name;
               return (
                 <button
                   key={preset.name}
                   onClick={() => handleApplyPreset(preset)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all cursor-pointer shrink-0 ${
                     isSelected
                       ? 'bg-[#002b7f] text-white shadow-sm'
                       : 'bg-white hover:bg-slate-100 text-slate-700 border border-slate-200'
@@ -199,10 +199,10 @@ export default function RiskMatrixSimulator({ onOpenEnquireModal }) {
       </div>
 
       {/* Main Simulator Grid & Output Panel */}
-      <div className="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="p-4 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start w-full max-w-full min-w-0">
         
         {/* Left Side: 5x5 Interactive Matrix Grid (7 cols) */}
-        <div className="lg:col-span-7 space-y-4">
+        <div className="lg:col-span-7 space-y-4 w-full max-w-full min-w-0">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-700 font-mono">
               Matrix: Likelihood × Severity

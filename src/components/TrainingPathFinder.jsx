@@ -166,17 +166,17 @@ export default function TrainingPathFinder({ onOpenEnquireModal }) {
   const pathway = PATHWAYS[pathwayKey] || PATHWAYS['supervisor-risk'];
 
   return (
-    <div className="rounded-3xl bg-white border border-slate-200/90 shadow-xl overflow-hidden nebosh-card">
+    <div className="rounded-3xl bg-white border border-slate-200/90 shadow-xl overflow-hidden nebosh-card w-full max-w-full">
       
       {/* Header */}
-      <div className="bg-[#002b7f] text-white p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#001f5c]">
-        <div className="space-y-1">
+      <div className="bg-[#002b7f] text-white p-5 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#001f5c] w-full max-w-full">
+        <div className="space-y-1 min-w-0">
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-0.5 rounded-full bg-[#53bbdf]/20 text-[#81ccdd] border border-[#53bbdf]/30 text-[11px] font-mono font-bold uppercase tracking-wider">
               Career &amp; Organization Navigator
             </span>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
             Personalized Safety Training Path Finder
           </h3>
           <p className="text-xs sm:text-sm text-slate-200 max-w-2xl font-normal leading-relaxed">
@@ -184,17 +184,17 @@ export default function TrainingPathFinder({ onOpenEnquireModal }) {
           </p>
         </div>
 
-        <div className="flex items-center gap-2 text-xs font-mono text-slate-300">
+        <div className="flex items-center gap-2 text-xs font-mono text-slate-300 shrink-0">
           <Compass className="w-5 h-5 text-[#53bbdf]" />
           <span>Interactive Pathway Engine</span>
         </div>
       </div>
 
       {/* Main Body */}
-      <div className="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="p-4 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start w-full max-w-full min-w-0">
         
         {/* Left Column: Selectors (7 cols) */}
-        <div className="lg:col-span-7 space-y-6">
+        <div className="lg:col-span-7 space-y-6 w-full min-w-0">
           
           {/* Step 1: Select Your Operational Role */}
           <div className="space-y-3">
@@ -261,8 +261,8 @@ export default function TrainingPathFinder({ onOpenEnquireModal }) {
         </div>
 
         {/* Right Column: Tailored Recommendation Box (5 cols) */}
-        <div className="lg:col-span-5 space-y-4">
-          <div className="p-6 sm:p-7 rounded-2xl bg-[#f0f7fb] border-2 border-[#002b7f] space-y-4 shadow-lg animate-in fade-in duration-300">
+        <div className="lg:col-span-5 space-y-4 w-full min-w-0">
+          <div className="p-4 sm:p-7 rounded-2xl bg-[#f0f7fb] border-2 border-[#002b7f] space-y-4 shadow-lg animate-in fade-in duration-300 w-full min-w-0">
             
             <div className="flex items-center justify-between border-b border-[#cfe5ee] pb-3">
               <span className="text-[11px] font-mono font-bold text-[#0083A9] uppercase">

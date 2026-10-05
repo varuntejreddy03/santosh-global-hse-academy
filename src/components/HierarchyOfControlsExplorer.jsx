@@ -91,17 +91,17 @@ export default function HierarchyOfControlsExplorer({ onOpenEnquireModal }) {
   const Icon = activeControl.icon;
 
   return (
-    <div className="rounded-3xl bg-white border border-slate-200/90 shadow-xl overflow-hidden nebosh-card">
+    <div className="rounded-3xl bg-white border border-slate-200/90 shadow-xl overflow-hidden nebosh-card w-full max-w-full">
       
       {/* Header */}
-      <div className="bg-[#002b7f] text-white p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#001f5c]">
-        <div className="space-y-1">
+      <div className="bg-[#002b7f] text-white p-5 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#001f5c] w-full max-w-full">
+        <div className="space-y-1 min-w-0">
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-0.5 rounded-full bg-[#53bbdf]/20 text-[#81ccdd] border border-[#53bbdf]/30 text-[11px] font-mono font-bold uppercase tracking-wider">
               Systematic Safety Principles
             </span>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
             Hierarchy of Risk Controls Explorer
           </h3>
           <p className="text-xs sm:text-sm text-slate-200 max-w-2xl font-normal leading-relaxed">
@@ -109,17 +109,17 @@ export default function HierarchyOfControlsExplorer({ onOpenEnquireModal }) {
           </p>
         </div>
 
-        <div className="text-left md:text-right">
+        <div className="text-left md:text-right shrink-0">
           <span className="text-[10px] font-mono text-slate-300 block uppercase">Pedagogical Standard</span>
           <span className="text-sm font-bold text-white">ISO 45001 / OSHA 1910</span>
         </div>
       </div>
 
       {/* Main Interactive Grid */}
-      <div className="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="p-4 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full max-w-full min-w-0">
         
         {/* Left: The Interactive Inverted Pyramid (6 cols) */}
-        <div className="lg:col-span-6 space-y-3">
+        <div className="lg:col-span-6 space-y-3 w-full min-w-0">
           <div className="flex items-center justify-between text-xs font-mono font-bold text-slate-500 mb-1">
             <span>MOST EFFECTIVE (ELIMINATION)</span>
             <TrendingDown className="w-4 h-4 text-[#0083A9]" />
@@ -170,7 +170,7 @@ export default function HierarchyOfControlsExplorer({ onOpenEnquireModal }) {
         </div>
 
         {/* Right: Dynamic Depth Inspector (6 cols) */}
-        <div className="lg:col-span-6 space-y-4 p-6 sm:p-7 rounded-2xl bg-[#f8fafc] border border-slate-200">
+        <div className="lg:col-span-6 space-y-4 p-4 sm:p-7 rounded-2xl bg-[#f8fafc] border border-slate-200 w-full min-w-0">
           <div className="flex items-center justify-between border-b border-slate-200 pb-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-[#e8f2f8] text-[#002b7f] flex items-center justify-center border border-[#cfe5ee] shadow-sm">

@@ -199,10 +199,10 @@ export function FloatingDock({ onOpenEnquire, onNavigate }) {
   if (!showDock) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center gap-2 sm:gap-3 animate-in fade-in slide-in-from-bottom-5 duration-300">
+    <div className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-40 flex items-center gap-2 sm:gap-3 animate-in fade-in slide-in-from-bottom-5 duration-300 pointer-events-auto">
       
       {/* 24/7 Live Desk Pill */}
-      <div className="hidden md:flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/95 backdrop-blur-md border border-slate-200 shadow-xl text-xs font-semibold text-[#002b7f]">
+      <div className="hidden md:flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/95 backdrop-blur-md border border-slate-200 shadow-xl text-xs font-semibold text-[#002b7f] shrink-0">
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -213,7 +213,7 @@ export function FloatingDock({ onOpenEnquire, onNavigate }) {
       {/* Quick Enquire Floating Button */}
       <button
         onClick={() => onOpenEnquire()}
-        className="flex items-center gap-2 px-4 py-3 rounded-full bg-[#002b7f] hover:bg-[#0083A9] text-white text-xs font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+        className="flex items-center gap-2 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-full bg-[#002b7f] hover:bg-[#0083A9] text-white text-xs font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer shrink-0"
         title="Open 24/7 Training Enquiry"
       >
         <MessageSquare className="w-4 h-4 stroke-[2.5]" />
@@ -223,7 +223,7 @@ export function FloatingDock({ onOpenEnquire, onNavigate }) {
       {/* Circular Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className="relative w-11 h-11 rounded-full bg-white text-[#002b7f] flex items-center justify-center shadow-xl hover:shadow-2xl border border-slate-200 transition-all hover:scale-110 active:scale-95 cursor-pointer group"
+        className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-[#002b7f] flex items-center justify-center shadow-xl hover:shadow-2xl border border-slate-200 transition-all hover:scale-110 active:scale-95 cursor-pointer group shrink-0"
         aria-label="Scroll to top"
       >
         {/* SVG Progress Ring */}
