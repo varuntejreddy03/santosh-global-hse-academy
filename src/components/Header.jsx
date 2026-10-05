@@ -16,10 +16,10 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
-    { id: 'services', label: 'Services' },
-    { id: 'courses', label: 'Courses' },
-    { id: 'why-choose-us', label: 'Why Choose Us' },
-    { id: 'contact', label: 'Contact Us' },
+    { id: 'courses', label: 'Programs' },
+    { id: 'services', label: 'Resources' },
+    { id: 'why-choose-us', label: 'Why Us' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   const handleNavClick = (pageId) => {
@@ -31,26 +31,13 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
-        {/* Top micro-bar: NEBOSH-style Deep Navy Blue Bar */}
-        <div className="bg-[#002b7f] text-white py-1.5 sm:py-2 px-3 sm:px-4 text-xs w-full max-w-full overflow-hidden">
-          <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2 sm:gap-4 overflow-hidden min-w-0">
-              <span className="inline-flex items-center gap-1.5 font-medium shrink-0">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-                </span>
-                <span className="text-[11px] sm:text-xs font-semibold whitespace-nowrap">24/7 Operations Desk</span>
-              </span>
-              <span className="text-[#53bbdf] shrink-0">•</span>
-              <span className="inline-flex items-center gap-1 text-slate-100 text-[11px] sm:text-xs truncate">
-                <Globe className="w-3.5 h-3.5 text-[#81ccdd] shrink-0" />
-                <span className="truncate">Worldwide Accessibility</span>
-              </span>
-            </div>
-            <div className="hidden md:flex items-center gap-3 text-slate-200 text-[11px] font-medium shrink-0">
-              <span>Specialised Occupational Health &amp; Safety Academy</span>
-            </div>
+        {/* Top information strip */}
+        <div className="bg-[#063B78] text-white py-1.5 sm:py-2 px-3 sm:px-4 text-xs w-full max-w-full overflow-hidden">
+          <div className="max-w-7xl mx-auto flex items-center justify-center lg:justify-between gap-4 text-[11px] font-medium">
+            <span className="inline-flex items-center gap-1.5"><Globe className="w-3.5 h-3.5 text-[#18C6D9]" />Online &amp; Classroom Training Worldwide</span>
+            <span className="hidden lg:inline">Learn from Industry Experts</span>
+            <span className="hidden lg:inline">Exam-Focused Preparation</span>
+            <span className="hidden lg:inline">Dedicated Learner Support</span>
           </div>
         </div>
 
@@ -63,21 +50,12 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
               onClick={() => handleNavClick('home')}
               className="flex items-center gap-2 sm:gap-3.5 text-left group focus:outline-none cursor-pointer min-w-0 shrink"
             >
-              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg bg-[#002b7f] flex items-center justify-center shadow-md group-hover:bg-[#001f5c] transition-colors shrink-0">
+              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg bg-[#00A6B4] flex items-center justify-center shadow-md group-hover:bg-[#063B78] transition-colors shrink-0">
                 <ShieldCheck className="w-4.5 h-4.5 sm:w-6 sm:h-6 text-white stroke-[2.4]" />
               </div>
               <div className="min-w-0">
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="text-lg sm:text-2xl font-extrabold tracking-tight text-[#002b7f] leading-none">
-                    SANTOSH
-                  </span>
-                  <span className="text-[9px] sm:text-[10px] uppercase tracking-wider px-1.5 sm:px-2 py-0.5 rounded bg-[#f0f7fb] text-[#002b7f] font-bold border border-[#cfe5ee] shrink-0">
-                    ACADEMY
-                  </span>
-                </div>
-                <p className="text-[11px] text-slate-500 hidden xl:block leading-tight font-medium max-w-sm line-clamp-1 mt-0.5">
-                  Specialised Academy for NextGen Trainings in OHS
-                </p>
+                <span className="block text-lg sm:text-2xl font-extrabold tracking-tight text-[#063B78] leading-none">SANTOSH</span>
+                <span className="block text-[10px] sm:text-xs font-semibold text-[#00A6B4] leading-tight mt-0.5">Global HSE Academy</span>
               </div>
             </button>
 
@@ -108,9 +86,9 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
             <div className="flex items-center gap-2 sm:gap-3 shrink-0">
               <button
                 onClick={() => onOpenEnquireModal()}
-                className="hidden md:inline-flex btn-primary text-xs py-2.5 px-4"
+                className="hidden md:inline-flex btn-orange text-xs py-2.5 px-4"
               >
-                <span>Enquire Now</span>
+                <span>ENQUIRE NOW</span>
                 <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
               </button>
 
@@ -130,8 +108,8 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-2xl animate-in slide-in-from-top duration-200 max-h-[calc(100vh-80px)] overflow-y-auto">
             <div className="py-2.5 px-3.5 rounded-lg bg-[#f0f7fb] text-xs text-slate-600 mb-3 border border-[#cfe5ee]">
-              <p className="font-bold text-[#002b7f] mb-0.5">SANTOSH Academy</p>
-              <p className="text-[11px] text-slate-600">Specialised Academy for NextGen Trainings in Occupational Health and Safety</p>
+              <p className="font-bold text-[#002b7f] mb-0.5">SANTOSH Global HSE Academy</p>
+              <p className="text-[11px] text-slate-600">ASP® · CSP® · CRSP® Examination Preparation</p>
             </div>
 
             {navLinks.map((link) => {
@@ -160,7 +138,7 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
                 }}
                 className="btn-primary w-full py-3.5 text-sm font-bold flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
-                <span>Enquire Now (24/7)</span>
+                <span>Enquire Now</span>
                 <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>

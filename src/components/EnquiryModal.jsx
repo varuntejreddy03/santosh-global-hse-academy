@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Send, ShieldCheck, Clock, Globe2, CheckCircle2 } from 'lucide-react';
-import { CORE_PROGRAMS, ACADEMY_INFO } from '../data/academyData';
+import { CORE_PROGRAMS, ACADEMY_INFO, EXAM_PREP_PROGRAMS } from '../data/academyData';
 
 export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSuccess }) {
   const [formData, setFormData] = useState({
@@ -8,7 +8,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
     email: '',
     phone: '',
     organisation: '',
-    interestedTraining: preselectedProgram || 'HSE Training',
+    interestedTraining: preselectedProgram || EXAM_PREP_PROGRAMS[0].title,
     message: '',
   });
 
@@ -163,6 +163,11 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
                   onChange={(e) => setFormData({ ...formData, interestedTraining: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#002b7f] focus:ring-2 focus:ring-[#002b7f]/20 transition-all cursor-pointer shadow-sm"
                 >
+                  {EXAM_PREP_PROGRAMS.map((prog) => (
+                    <option key={prog.id} value={prog.title}>
+                      {prog.title}
+                    </option>
+                  ))}
                   {CORE_PROGRAMS.map((prog) => (
                     <option key={prog.id} value={prog.title}>
                       {prog.title}
