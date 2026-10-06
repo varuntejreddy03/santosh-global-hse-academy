@@ -14,6 +14,8 @@ export default function WhyChooseUsPage({ onOpenEnquireModal }) {
       />
       <section className="py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-2 items-center">
+          <div>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#063B78] mb-6">More than training. A career partner.</h2>
           <ul className="space-y-4">
             {WHY_US_POINTS.map((p) => (
               <li key={p} className="flex items-center gap-3 text-lg font-semibold text-[#063B78]">
@@ -22,6 +24,7 @@ export default function WhyChooseUsPage({ onOpenEnquireModal }) {
               </li>
             ))}
           </ul>
+          </div>
           <img src="/images/hse_training_3d.jpg" alt="Exam preparation session" className="rounded-2xl shadow-lg w-full object-cover" loading="lazy" />
         </div>
       </section>
