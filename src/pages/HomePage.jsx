@@ -54,7 +54,7 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <button onClick={scrollToPrograms} className="btn-orange">
-              Explore Programs <ArrowRight className="w-4 h-4" />
+              Explore Courses <ArrowRight className="w-4 h-4" />
             </button>
             <button onClick={() => enquire()} className="btn-outline-light">
               <Download className="w-4 h-4" /> Download Brochure
@@ -90,7 +90,7 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
       <section id="programs" className="bg-[#F3F8FC] py-14 sm:py-20 scroll-mt-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#063B78]">Examination Preparation Programs</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#063B78]">Examination Preparation Courses</h2>
             <p className="mt-3 text-slate-600">
               Professional coaching to prepare you for the ASP®, CSP® and CRSP® examinations.
             </p>

@@ -23,7 +23,7 @@ export default function AboutPage({ setCurrentPage, onOpenEnquireModal }) {
               sessions, practice questions, mock exams and mentorship — online and in the classroom.
             </p>
             <button onClick={() => setCurrentPage('courses')} className="mt-6 btn-primary">
-              View Programs <ArrowRight className="w-4 h-4" />
+              View Courses <ArrowRight className="w-4 h-4" />
             </button>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">

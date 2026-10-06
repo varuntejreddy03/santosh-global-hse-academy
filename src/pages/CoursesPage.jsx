@@ -10,9 +10,9 @@ export default function CoursesPage({ onOpenEnquireModal }) {
   return (
     <div className="bg-white">
       <PageHero
-        eyebrow="Programs"
+        eyebrow="Courses"
         title="Examination Preparation"
-        accent="Programs"
+        accent="Courses"
         text="Focused training for the ASP®, CSP® and CRSP® examinations — structured sessions, practice questions and mock exams."
       />
 

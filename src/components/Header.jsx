@@ -69,13 +69,13 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
                     onClick={() => handleNavClick(link.id)}
                     className={`px-3.5 py-2 rounded-md text-sm font-semibold transition-colors relative cursor-pointer ${
                       isActive 
-                        ? 'text-[#002b7f] bg-[#f0f7fb]' 
-                        : 'text-slate-700 hover:text-[#002b7f] hover:bg-slate-50'
+                        ? 'text-[#063B78] bg-[#F3F8FC]' 
+                        : 'text-slate-700 hover:text-[#063B78] hover:bg-slate-50'
                     }`}
                   >
                     {link.label}
                     {isActive && (
-                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#002b7f] rounded-full"></span>
+                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#063B78] rounded-full"></span>
                     )}
                   </button>
                 );
@@ -95,7 +95,7 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-1.5 sm:p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:text-[#002b7f] hover:bg-slate-200 lg:hidden border border-slate-200 focus:outline-none cursor-pointer shrink-0"
+                className="p-1.5 sm:p-2.5 rounded-lg bg-slate-100 text-slate-700 hover:text-[#063B78] hover:bg-slate-200 lg:hidden border border-slate-200 focus:outline-none cursor-pointer shrink-0"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -107,8 +107,8 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
         {/* Mobile Drawer Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-2xl animate-in slide-in-from-top duration-200 max-h-[calc(100vh-80px)] overflow-y-auto">
-            <div className="py-2.5 px-3.5 rounded-lg bg-[#f0f7fb] text-xs text-slate-600 mb-3 border border-[#cfe5ee]">
-              <p className="font-bold text-[#002b7f] mb-0.5">SANTOSH Global HSE Academy</p>
+            <div className="py-2.5 px-3.5 rounded-lg bg-[#F3F8FC] text-xs text-slate-600 mb-3 border border-[#d6e6f3]">
+              <p className="font-bold text-[#063B78] mb-0.5">SANTOSH Global HSE Academy</p>
               <p className="text-[11px] text-slate-600">ASP® · CSP® · CRSP® Examination Preparation</p>
             </div>
 
@@ -120,12 +120,12 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
                   onClick={() => handleNavClick(link.id)}
                   className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-left text-sm font-semibold transition-colors cursor-pointer ${
                     isActive 
-                      ? 'text-[#002b7f] bg-[#f0f7fb] border-l-4 border-[#002b7f]' 
+                      ? 'text-[#063B78] bg-[#F3F8FC] border-l-4 border-[#063B78]' 
                       : 'text-slate-700 hover:bg-slate-50'
                   }`}
                 >
                   <span>{link.label}</span>
-                  <ChevronRight className={`w-4 h-4 ${isActive ? 'text-[#002b7f]' : 'text-slate-400'}`} />
+                  <ChevronRight className={`w-4 h-4 ${isActive ? 'text-[#063B78]' : 'text-slate-400'}`} />
                 </button>
               );
             })}
@@ -145,11 +145,11 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
 
             <div className="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-500 flex items-center justify-between px-2">
               <span className="flex items-center gap-1.5 text-slate-700 font-medium">
-                <Clock className="w-3.5 h-3.5 text-[#002b7f]" />
+                <Clock className="w-3.5 h-3.5 text-[#063B78]" />
                 24/7 Hours
               </span>
               <span className="flex items-center gap-1.5 text-slate-700 font-medium">
-                <Globe className="w-3.5 h-3.5 text-[#0083A9]" />
+                <Globe className="w-3.5 h-3.5 text-[#00A6B4]" />
                 Worldwide Access
               </span>
             </div>
