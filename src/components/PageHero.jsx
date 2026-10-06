@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
-export function PageHero({ eyebrow, title, accent, text, image = '/images/santosh_hero_3d.jpg' }) {
+export function PageHero({ eyebrow, title, accent, text, image = '/images/hero_refinery.jpg' }) {
   return (
     <section className="relative isolate overflow-hidden bg-[#063B78] text-white">
       <img src={image} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover object-right opacity-60" />

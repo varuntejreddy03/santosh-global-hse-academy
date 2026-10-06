@@ -6,7 +6,7 @@ export const ACADEMY_INFO = {
   businessHours: "24/7",
   accessibility: "Worldwide",
   focus: "Professional HSE and workplace safety training",
-  heroImage: "/images/santosh_hero_3d.jpg",
+  heroImage: "/images/hero_refinery.jpg",
 };
 
 export const CORE_PROGRAMS = [
@@ -208,6 +208,8 @@ export const EXAM_PREP_PROGRAMS = [
     fullName: 'Associate Safety Professional®',
     badge: 'Foundation Level',
     tone: 'teal',
+    image: '/images/card_asp.jpg',
+    imageAlt: 'Early-career safety professional wearing white hard hat and hi-vis vest',
     points: [
       'Comprehensive exam-focused training',
       'Core safety knowledge & applications',
@@ -223,6 +225,8 @@ export const EXAM_PREP_PROGRAMS = [
     badge: 'Most Popular · Advanced',
     tone: 'blue',
     featured: true,
+    image: '/images/card_csp.jpg',
+    imageAlt: 'Experienced senior safety professional wearing white hard hat and safety glasses',
     points: [
       'In-depth domain-wise training',
       'Advanced exam strategies',
@@ -238,6 +242,8 @@ export const EXAM_PREP_PROGRAMS = [
     fullName: 'Canadian Registered Safety Professional®',
     badge: 'Canada Focused',
     tone: 'orange',
+    image: '/images/card_crsp.jpg',
+    imageAlt: 'Canadian occupational health and safety professional with protective equipment',
     points: [
       'Canada-focused exam preparation',
       'CRSP® blueprint-aligned preparation',

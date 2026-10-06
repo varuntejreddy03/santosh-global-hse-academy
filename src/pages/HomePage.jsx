@@ -33,7 +33,7 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
       <section className="relative isolate overflow-hidden bg-[#063B78] text-white">
         <img
           src={ACADEMY_INFO.heroImage}
-          alt=""
+          alt="Safety professional in white helmet and hi-vis vest in industrial refinery at golden hour"
           className="absolute inset-0 -z-20 h-full w-full object-cover object-right"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#063B78] via-[#063B78]/90 to-[#063B78]/30" />
@@ -112,17 +112,31 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
                       </span>
                       <h3 className="mt-4 text-3xl font-extrabold text-[#063B78]">{p.code}</h3>
                       <p className="text-sm font-semibold text-slate-600">{p.fullName}</p>
-                      <ul className="mt-5 space-y-2.5 flex-1">
-                        {p.points.map((pt) => (
-                          <li key={pt} className="flex items-start gap-2.5 text-sm text-slate-700">
-                            <Check className={`w-4 h-4 mt-0.5 shrink-0 stroke-[3] ${t.tick}`} />
-                            {pt}
-                          </li>
-                        ))}
-                      </ul>
+                      
+                      <div className="mt-5 flex-1 flex flex-row items-end justify-between gap-3 min-h-[190px]">
+                        <ul className="space-y-2.5 flex-1 min-w-0">
+                          {p.points.map((pt) => (
+                            <li key={pt} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
+                              <Check className={`w-4 h-4 mt-0.5 shrink-0 stroke-[3] ${t.tick}`} />
+                              <span className="leading-snug">{pt}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        {p.image && (
+                          <div className="shrink-0 w-28 sm:w-32 flex justify-end items-end self-end">
+                            <img
+                              src={p.image}
+                              alt={p.imageAlt || p.fullName}
+                              className="w-full max-h-44 object-contain object-bottom drop-shadow-md rounded-xl"
+                              loading="lazy"
+                            />
+                          </div>
+                        )}
+                      </div>
+
                       <button
                         onClick={() => enquire(p.title)}
-                        className={`mt-7 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold text-white transition-colors cursor-pointer ${t.btn}`}
+                        className={`mt-6 w-full inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold text-white transition-colors cursor-pointer ${t.btn}`}
                       >
                         Explore {p.code} Program <ArrowRight className="w-4 h-4" />
                       </button>
@@ -247,8 +261,8 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
           </div>
           <div className="min-h-[280px] lg:min-h-full">
             <img
-              src="/images/hse_training_3d.jpg"
-              alt="Instructor-led HSE examination preparation session"
+              src="/images/classroom_training.jpg"
+              alt="HSE instructor leading an interactive certification workshop for a cohort of safety engineers"
               className="h-full w-full object-cover"
               loading="lazy"
             />
@@ -311,7 +325,12 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
 
       {/* 12. FINAL CTA */}
       <section className="relative isolate overflow-hidden bg-[#063B78] text-white">
-        <img src={ACADEMY_INFO.heroImage} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover opacity-40" loading="lazy" />
+        <img
+          src="/images/cta_sunset_plant.jpg"
+          alt="Two safety professionals pointing toward an industrial plant at sunset"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-right opacity-40"
+          loading="lazy"
+        />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#063B78] via-[#063B78]/90 to-[#063B78]/60" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
           <p className="text-lg font-semibold text-[#18C6D9]">Ready to Advance Your HSE Career?</p>

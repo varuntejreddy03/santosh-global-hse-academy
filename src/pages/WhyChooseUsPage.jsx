@@ -25,7 +25,7 @@ export default function WhyChooseUsPage({ onOpenEnquireModal }) {
             ))}
           </ul>
           </div>
-          <img src="/images/hse_training_3d.jpg" alt="Exam preparation session" className="rounded-2xl shadow-lg w-full object-cover" loading="lazy" />
+          <img src="/images/mock_exam.jpg" alt="Safety practitioners taking computer-based mock exams in modern training facility" className="rounded-2xl shadow-lg w-full object-cover" loading="lazy" />
         </div>
       </section>
       <section className="bg-[#F3F8FC] py-14">
