@@ -1,33 +1,37 @@
 import React from 'react';
-import { Users, Laptop, FileCheck, UserCheck, BookOpen, Globe2 } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
+import { CORE_PROGRAMS } from '../data/academyData';
 import { PageHero, CtaBand } from '../components/PageHero';
-
-const items = [
-  [BookOpen, 'Structured Curriculum', 'Step-by-step preparation aligned to each examination’s published blueprint.'],
-  [Users, 'Instructor-Led Sessions', 'Live guidance from experienced HSE professionals.'],
-  [FileCheck, 'Practice Questions & Mock Exams', 'Exam-style practice with detailed explanations and performance review.'],
-  [UserCheck, 'Expert Mentorship', 'Professional guidance on weak areas and exam strategy.'],
-  [Laptop, 'Online & Classroom Delivery', 'Flexible learning modes for working professionals.'],
-  [Globe2, 'Global Learning Community', 'Learn alongside safety professionals from around the world.'],
-];
 
 export default function ServicesPage({ onOpenEnquireModal }) {
   return (
     <div className="bg-white">
       <PageHero
-        eyebrow="Resources"
-        title="Everything you need to"
-        accent="prepare with confidence"
-        text="The learning support that comes with every ASP®, CSP® and CRSP® examination-preparation program."
+        eyebrow="Services"
+        title="Health, Safety & Environment"
+        accent="Courses"
+        text="Professional trainings in HSE, fire and safety, risk assessment, incident investigation, safety management and emergency response."
       />
       <section className="bg-[#F3F8FC] py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map(([Icon, t, d]) => (
-            <div key={t} className="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#e6f7f9] text-[#00A6B4]"><Icon className="w-6 h-6" /></div>
-              <h3 className="text-lg font-bold text-[#063B78]">{t}</h3>
-              <p className="mt-2 text-sm text-slate-600">{d}</p>
-            </div>
+          {CORE_PROGRAMS.map((c) => (
+            <article key={c.id} className="flex flex-col overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-sm">
+              <img src={c.image} alt={c.title} className="h-44 w-full object-cover" loading="lazy" />
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="text-xl font-bold text-[#063B78]">{c.title}</h3>
+                <p className="mt-2 text-sm text-slate-600">{c.shortDescription}</p>
+                <ul className="mt-4 space-y-2 flex-1">
+                  {c.learningAreas.slice(0, 3).map((a) => (
+                    <li key={a} className="flex gap-2 text-sm text-slate-700">
+                      <Check className="w-4 h-4 mt-0.5 shrink-0 text-[#00A6B4] stroke-[3]" />{a}
+                    </li>
+                  ))}
+                </ul>
+                <button onClick={() => onOpenEnquireModal(c.title)} className="mt-5 btn-primary">
+                  Enquire <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </article>
           ))}
         </div>
       </section>

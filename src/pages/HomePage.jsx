@@ -5,7 +5,7 @@ import {
   ShieldCheck, GraduationCap, Award, ChevronRight,
 } from 'lucide-react';
 import {
-  ACADEMY_INFO, EXAM_PREP_PROGRAMS, BENEFITS, JOURNEY_STEPS, WHY_US_POINTS,
+  ACADEMY_INFO, CORE_PROGRAMS, EXAM_PREP_PROGRAMS, BENEFITS, JOURNEY_STEPS, WHY_US_POINTS,
   STATS, STATS_VERIFIED, INSTRUCTOR, INSTRUCTOR_VERIFIED,
   TESTIMONIALS, TESTIMONIALS_VERIFIED,
 } from '../data/academyData';
@@ -76,6 +76,16 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
         </div>
       </section>
 
+      {/* Academy tagline (highlighted) */}
+      <section className="bg-gradient-to-r from-[#00A6B4] to-[#0757B8] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-center">
+          <p className="text-lg sm:text-2xl font-extrabold text-white">
+            SANTOSH — Specialised Academy for NextGen Trainings in Occupational Health and Safety
+          </p>
+          <p className="mt-1 text-sm font-medium text-white/90">Business hours 24/7 · Accessible all over the world</p>
+        </div>
+      </section>
+
       {/* 5. PROGRAM CARDS */}
       <section id="programs" className="bg-[#F3F8FC] py-14 sm:py-20 scroll-mt-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,6 +136,25 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
             SANTOSH Global HSE Academy provides independent training and examination preparation.
             The ASP®, CSP® and CRSP® credentials are awarded solely by their respective certifying bodies.
           </p>
+        </div>
+      </section>
+
+      {/* Services: professional trainings */}
+      <section className="py-14 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#063B78]">Professional Trainings</h2>
+          <p className="mt-2 text-slate-600">Health, Safety and Environment courses for professionals and organisations.</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {CORE_PROGRAMS.map((c) => (
+              <button key={c.id} onClick={() => setCurrentPage('services')} className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 text-left shadow-sm hover:border-[#00A6B4] cursor-pointer">
+                <img src={c.image} alt="" className="h-16 w-16 rounded-lg object-cover" loading="lazy" />
+                <span>
+                  <span className="block font-bold text-[#063B78]">{c.title}</span>
+                  <span className="block text-xs text-slate-500 line-clamp-2">{c.shortDescription}</span>
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -11,8 +11,7 @@ import { EXAM_PREP_PROGRAMS } from '../data/academyData';
 export default function Footer({ setCurrentPage, onOpenEnquireModal }) {
   const go = (id) => { setCurrentPage(id); window.scrollTo({ top: 0, behavior: 'smooth' }); };
   const links = [
-    ['home', 'Home'], ['about', 'About Us'], ['courses', 'Programs'],
-    ['services', 'Resources'], ['why-choose-us', 'Why Us'], ['contact', 'Contact'],
+    ['home', 'Home'], ['about', 'About Us'], ['services', 'Services'], ['why-choose-us', 'Why Us'], ['contact', 'Contact'],
   ];
   return (
     <footer className="bg-[#063B78] text-slate-300">
@@ -26,6 +25,9 @@ export default function Footer({ setCurrentPage, onOpenEnquireModal }) {
               <span className="block text-xs font-semibold text-[#18C6D9]">Global HSE Academy</span>
             </div>
           </div>
+          <p className="text-sm max-w-md font-semibold text-white">
+            Specialised Academy for NextGen Trainings in Occupational Health and Safety
+          </p>
           <p className="text-sm max-w-md">
             Professional training and examination preparation for the ASP®, CSP® and CRSP® safety certifications.
           </p>
@@ -42,7 +44,7 @@ export default function Footer({ setCurrentPage, onOpenEnquireModal }) {
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-4">Programs</h4>
+          <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-4">Courses</h4>
           <ul className="space-y-2 text-sm">
             {EXAM_PREP_PROGRAMS.map((p) => (
               <li key={p.id} className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-[#18C6D9]" />{p.title}</li>
@@ -54,7 +56,7 @@ export default function Footer({ setCurrentPage, onOpenEnquireModal }) {
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-slate-400 px-4">
-        &copy; {new Date().getFullYear()} SANTOSH Global HSE Academy. All rights reserved.
+        &copy; {new Date().getFullYear()} SANTOSH Global HSE Academy · Business hours 24/7 · Accessible worldwide · All rights reserved.
       </div>
     </footer>
   );

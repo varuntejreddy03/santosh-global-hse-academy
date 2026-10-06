@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle2, Globe2, Laptop, Users } from 'lucide-react';
-import { EXAM_PREP_PROGRAMS } from '../data/academyData';
+import { Send, CheckCircle2, Globe2, Clock, Users } from 'lucide-react';
+import { EXAM_PREP_PROGRAMS, CORE_PROGRAMS } from '../data/academyData';
 import { PageHero } from '../components/PageHero';
 
 export default function ContactPage({ setCurrentPage, onShowToast }) {
@@ -18,7 +18,7 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
-      if (onShowToast) onShowToast(`Enquiry sent successfully for ${formData.name}. Our team will reach out shortly.`);
+      if (onShowToast) onShowToast(`Enquiry sent successfully for ${formData.name}. Our 24/7 team will reach out promptly.`);
     }, 600);
   };
 
@@ -36,8 +36,8 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 lg:grid-cols-[1fr_1.6fr]">
           <div className="space-y-4">
             {[
-              [Globe2, 'Worldwide', 'Online & classroom training for learners around the world.'],
-              [Laptop, 'Flexible Learning', 'Choose the mode that suits your schedule.'],
+              [Globe2, 'Accessible Worldwide', 'Open to learners all over the world.'],
+              [Clock, 'Business Hours 24/7', 'Enquiries are welcome at any time.'],
               [Users, 'Dedicated Learner Support', 'Personal guidance from enquiry through to exam day.'],
             ].map(([Icon, t, d]) => (
               <div key={t} className="flex gap-4 rounded-2xl bg-white border border-slate-200 p-5">
@@ -140,6 +140,9 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
                             <option key={prog.id} value={prog.title}>
                               {prog.title}
                             </option>
+                          ))}
+                          {CORE_PROGRAMS.map((prog) => (
+                            <option key={prog.id} value={prog.title}>{prog.title}</option>
                           ))}
                           <option value="General Training Enquiry">
                             General Training Enquiry

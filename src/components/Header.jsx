@@ -16,8 +16,8 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
-    { id: 'courses', label: 'Programs' },
-    { id: 'services', label: 'Resources' },
+    { id: 'services', label: 'Services' },
+    { id: 'courses', label: 'Courses' },
     { id: 'why-choose-us', label: 'Why Us' },
     { id: 'contact', label: 'Contact' },
   ];
@@ -34,8 +34,8 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
         {/* Top information strip */}
         <div className="bg-[#063B78] text-white py-1.5 sm:py-2 px-3 sm:px-4 text-xs w-full max-w-full overflow-hidden">
           <div className="max-w-7xl mx-auto flex items-center justify-center lg:justify-between gap-4 text-[11px] font-medium">
-            <span className="inline-flex items-center gap-1.5"><Globe className="w-3.5 h-3.5 text-[#18C6D9]" />Online &amp; Classroom Training Worldwide</span>
-            <span className="hidden lg:inline">Learn from Industry Experts</span>
+            <span className="inline-flex items-center gap-1.5"><Globe className="w-3.5 h-3.5 text-[#18C6D9]" />Business Hours: 24/7</span>
+            <span className="hidden lg:inline">Accessible Worldwide</span>
             <span className="hidden lg:inline">Exam-Focused Preparation</span>
             <span className="hidden lg:inline">Dedicated Learner Support</span>
           </div>
