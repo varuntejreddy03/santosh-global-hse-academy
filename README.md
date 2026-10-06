@@ -4,14 +4,15 @@ A premium, modern 6-page static web application built with **React**, **Vite**, 
 
 ---
 
-## 🎨 Color Palette & Typography (NEBOSH Inspiration)
+## 🎨 Colour Palette & Typography
 
-* **Primary Deep Navy Blue**: `#002b7f` (Header top-bar, primary CTAs, main titles, core icons)
-* **Secondary Dark Navy**: `#001f5c` (Footer canvas, dark badge backgrounds)
-* **Accent Cyan / Sky Blue**: `#0083A9` / `#53bbdf` / `#81ccdd` (Interactive hover states, badges, highlight ribbons)
-* **Soft Light Blue Tints**: `#f0f7fb` / `#e8f2f8` / `#cfe5ee` (Subtle section backdrops, icon containers, card borders)
-* **Crisp Clean White**: `#ffffff` (Main body, cards, navigation bar)
-* **Typography**: `"Helvetica Neue", Helvetica, Arial, sans-serif` (Official NEBOSH stylesheet standard)
+* **Deep Navy** `#063B78` · **Primary Blue** `#0757B8` · **Teal** `#00A6B4` · **Cyan** `#18C6D9`
+* **Light Blue Background** `#F3F8FC` · **Orange CTA accent** `#FF7A00`
+* **Typography**: Plus Jakarta Sans
+
+**Positioning:** SANTOSH Global HSE Academy provides training, coaching and examination preparation for ASP®, CSP® and CRSP®. It does not award those credentials.
+
+**Verified-content flags:** stats, instructor profile and testimonials are hidden until `STATS_VERIFIED`, `INSTRUCTOR_VERIFIED` and `TESTIMONIALS_VERIFIED` are set to `true` in `src/data/academyData.js` with real content.
 
 ---
 

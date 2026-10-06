@@ -194,3 +194,108 @@ export const WHO_WE_TRAIN_ROLES = [
   { role: "Corporate HSE Teams", desc: "Seeking standardized, coherent occupational safety training across multiple branches." },
   { role: "Career Advancement Professionals", desc: "Developing rigorous, practical competence in occupational health and safety." },
 ];
+
+// ---------------------------------------------------------------------------
+// Examination-preparation positioning.
+// SANTOSH provides training / coaching / exam preparation only. It does NOT
+// award ASP, CSP or CRSP credentials (issued by BCSP / BCRSP respectively).
+// ---------------------------------------------------------------------------
+export const EXAM_PREP_PROGRAMS = [
+  {
+    id: 'asp',
+    code: 'ASP®',
+    title: 'ASP® Examination Preparation',
+    fullName: 'Associate Safety Professional®',
+    badge: 'Foundation Level',
+    tone: 'teal',
+    points: [
+      'Comprehensive exam-focused training',
+      'Core safety knowledge & applications',
+      'Structured learning resources',
+      'Practice questions & mock tests',
+    ],
+  },
+  {
+    id: 'csp',
+    code: 'CSP®',
+    title: 'CSP® Examination Preparation',
+    fullName: 'Certified Safety Professional®',
+    badge: 'Most Popular · Advanced',
+    tone: 'blue',
+    featured: true,
+    points: [
+      'In-depth domain-wise training',
+      'Advanced exam strategies',
+      'Real-world case studies',
+      'Mock examinations',
+      'Performance analysis',
+    ],
+  },
+  {
+    id: 'crsp',
+    code: 'CRSP®',
+    title: 'CRSP® Examination Preparation',
+    fullName: 'Canadian Registered Safety Professional®',
+    badge: 'Canada Focused',
+    tone: 'orange',
+    points: [
+      'Canada-focused exam preparation',
+      'CRSP® blueprint-aligned preparation',
+      'Scenario-based practice',
+      'Mock assessments',
+    ],
+  },
+];
+
+export const BENEFITS = [
+  { icon: 'Users', title: 'Instructor-Led Training', text: 'Expert guidance' },
+  { icon: 'Laptop', title: 'Flexible Learning', text: 'Online & classroom' },
+  { icon: 'FileCheck', title: 'Mock Exams', text: 'Exam-focused practice' },
+  { icon: 'UserCheck', title: 'Expert Mentorship', text: 'Professional guidance' },
+  { icon: 'BookOpen', title: 'Structured Curriculum', text: 'Step-by-step preparation' },
+  { icon: 'Globe2', title: 'Global Learning Community', text: 'Learners worldwide' },
+];
+
+export const JOURNEY_STEPS = [
+  { icon: 'Lightbulb', title: 'Understand', text: 'Build your foundation with core safety concepts.' },
+  { icon: 'BookOpen', title: 'Learn', text: 'Follow structured instructor-led sessions.' },
+  { icon: 'FileText', title: 'Practice', text: 'Apply knowledge through questions and scenarios.' },
+  { icon: 'BarChart3', title: 'Assess', text: 'Measure progress with mock exams.' },
+  { icon: 'Target', title: 'Prepare', text: 'Strengthen weak areas and refine exam strategy.' },
+  { icon: 'Trophy', title: 'Achieve', text: 'Take the official examination and advance your career.' },
+];
+
+export const WHY_US_POINTS = [
+  'Experienced Instructors',
+  'Structured & Up-to-Date Curriculum',
+  'Exam-Focused Approach',
+  'Mock Assessments',
+  'Flexible Online & Classroom Training',
+  'Global Learner Support',
+];
+
+// ---------------------------------------------------------------------------
+// Sections below must only show VERIFIED content. Flip the flag to true once
+// real figures / testimonials / instructor details have been supplied.
+// ---------------------------------------------------------------------------
+export const STATS_VERIFIED = false;
+export const STATS = [
+  { value: '500+', label: 'Professionals Trained' },
+  { value: '90%+', label: 'Learner Success Support' },
+  { value: '15+', label: 'Countries Reached' },
+  { value: '10+', label: 'Industry Experts' },
+];
+
+export const INSTRUCTOR_VERIFIED = false;
+export const INSTRUCTOR = {
+  name: 'Santosh Kumar',
+  role: 'Founder & HSE Training Professional',
+  photo: '', // e.g. '/images/santosh-kumar.jpg'
+  bio: '', // genuine qualifications, experience and expertise
+  expertise: [], // e.g. ['Process Safety', 'Incident Investigation']
+};
+
+export const TESTIMONIALS_VERIFIED = false;
+export const TESTIMONIALS = [
+  // { name: 'Full Name', country: 'Country', program: 'CSP®', quote: '...', rating: 5, photo: '' }
+];
