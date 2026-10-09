@@ -1,12 +1,14 @@
 export const ACADEMY_INFO = {
   name: "SANTOSH",
-  fullName: "Specialised Academy for NextGen Trainings in Occupational Health and Safety",
+  fullName: "Specialised Academy for NextGen Trainings in Occupational Safety and Health",
   tagline: "Building Safer Workplaces Through Professional HSE Training",
-  supportingText: "Practical, professional and accessible occupational health and safety training designed for professionals and organisations worldwide.",
+  supportingText: "Practical, professional and accessible occupational safety and health training designed for professionals and organisations worldwide.",
   businessHours: "24/7",
   accessibility: "Worldwide",
   focus: "Professional HSE and workplace safety training",
   heroImage: "/images/hero_refinery.jpg",
+  logoImage: "/images/santosh-logo-transparent.png",
+  logoShield: "/images/santosh-shield-transparent.png",
 };
 
 export const CORE_PROGRAMS = [

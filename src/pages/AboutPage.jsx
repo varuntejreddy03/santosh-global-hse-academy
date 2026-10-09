@@ -17,6 +17,15 @@ export default function AboutPage({ setCurrentPage, onOpenEnquireModal }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-2">
           <div>
             <h2 className="text-3xl font-extrabold text-[#063B78]">More than training. A career partner.</h2>
+            <div className="mt-5 p-5 rounded-2xl bg-[#F3F8FC] border border-[#d6e6f3] flex items-center gap-4">
+              <img src="/images/santosh-shield-transparent.png" alt="SANTOSH Shield" className="h-12 sm:h-14 w-auto object-contain shrink-0" />
+              <div>
+                <h3 className="font-extrabold text-[#063B78] text-base sm:text-lg">SANTOSH Global HSE Academy</h3>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">
+                  <span className="font-bold text-[#0757B8]">S</span>pecialised <span className="font-bold text-[#0757B8]">A</span>cademy for <span className="font-bold text-[#0757B8]">N</span>extGen <span className="font-bold text-[#0757B8]">T</span>rainings in <span className="font-bold text-[#0757B8]">O</span>ccupational <span className="font-bold text-[#0757B8]">S</span>afety and <span className="font-bold text-[#0757B8]">H</span>ealth
+                </p>
+              </div>
+            </div>
             <p className="mt-4 text-slate-600 leading-relaxed">
               We help safety professionals build the knowledge, confidence and exam readiness they need
               for professional safety certification examinations, through structured instructor-led

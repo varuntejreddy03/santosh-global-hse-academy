@@ -50,8 +50,8 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
         {/* Top Header: NEBOSH Deep Navy Blue with Inset Ribbon */}
         <div className="bg-[#063B78] text-white px-6 py-4 flex items-center justify-between border-b border-[#052d5c] flex-shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-white/10 text-white flex items-center justify-center border border-white/20 shadow-sm">
-              <ShieldCheck className="w-5 h-5 stroke-[2.4]" />
+            <div className="h-9 w-9 rounded-lg bg-white p-1 flex items-center justify-center shadow-sm">
+              <img src="/images/santosh-shield-transparent.png" alt="SANTOSH" className="h-7 w-auto object-contain" />
             </div>
             <div>
               <h3 className="text-base font-bold text-white leading-tight">
@@ -95,7 +95,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <p className="text-xs text-slate-600 mb-2 font-normal leading-relaxed">
-                Fill in your details below to discuss your personal or organizational occupational health and safety training requirements.
+                Fill in your details below to discuss your personal or organizational occupational safety and health training requirements.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

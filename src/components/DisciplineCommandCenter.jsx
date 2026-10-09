@@ -243,7 +243,7 @@ export default function DisciplineCommandCenter({ setCurrentPage, onOpenEnquireM
                     <span>Key Learning Objectives &amp; Competencies</span>
                   </h4>
                   <p className="text-xs text-slate-300 font-normal">
-                    Targeted modules aligned with international occupational health and safety standards.
+                    Targeted modules aligned with international occupational safety and health standards.
                   </p>
                 </div>
 

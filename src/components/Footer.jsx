@@ -18,15 +18,15 @@ export default function Footer({ setCurrentPage, onOpenEnquireModal }) {
       <div className="h-1.5 w-full bg-gradient-to-r from-[#00A6B4] via-[#18C6D9] to-[#0757B8]" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-2 space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-[#00A6B4] flex items-center justify-center"><ShieldCheck className="w-6 h-6 text-white" /></div>
-            <div>
-              <span className="block text-2xl font-extrabold text-white leading-none">SANTOSH</span>
-              <span className="block text-xs font-semibold text-[#18C6D9]">Global HSE Academy</span>
-            </div>
+          <div className="inline-flex items-center bg-white rounded-xl px-3.5 py-2 shadow-sm border border-white/20">
+            <img 
+              src="/images/santosh-logo-transparent.png" 
+              alt="SANTOSH Global HSE Academy" 
+              className="h-10 sm:h-12 w-auto object-contain"
+            />
           </div>
           <p className="text-sm max-w-md font-semibold text-white">
-            Specialised Academy for NextGen Trainings in Occupational Health and Safety
+            Specialised Academy for NextGen Trainings in Occupational Safety and Health
           </p>
           <p className="text-sm max-w-md">
             Professional training and examination preparation for the ASP®, CSP® and CRSP® safety certifications.

@@ -100,3 +100,24 @@ This document records the official image assets generated for SANTOSH GLOBAL HSE
 - **Recommended Alt Text**:
   > *"SANTOSH Global HSE Academy social share card background featuring an abstract glowing safety shield and interconnected hexagon geometry in navy and teal."*
 - **Aesthetic Description**: Modern cybersecurity and industrial safety aesthetic, deep navy gradient, luminous lines, clean space for social card title previews.
+
+---
+
+## 10. Official Academy Brand Logo
+- **Filename**: `santosh-logo-transparent.png` / `santosh-logo.png`
+- **Location**: `/public/images/santosh-logo-transparent.png`
+- **Native Dimensions**: 894 × 245
+- **Primary Use**: Header navigation, desktop brand identity, footer corporate lockup
+- **Recommended Alt Text**:
+  > *"SANTOSH Global HSE Academy official logo featuring blue shield with fiery flame monogram and corporate lettering"*
+
+---
+
+## 11. Official Brand Shield Emblem
+- **Filename**: `santosh-shield-transparent.png` / `santosh-shield.png`
+- **Location**: `/public/images/santosh-shield-transparent.png`
+- **Native Dimensions**: 196 × 245
+- **Primary Use**: Browser favicon, mobile drawer menu, enquiry modal header, badge marks
+- **Recommended Alt Text**:
+  > *"SANTOSH Global HSE Academy shield emblem with flame insignia"*
+

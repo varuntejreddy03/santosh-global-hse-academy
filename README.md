@@ -1,4 +1,4 @@
-# SANTOSH — Specialised Academy for NextGen Trainings in Occupational Health and Safety
+# SANTOSH — Specialised Academy for NextGen Trainings in Occupational Safety and Health
 
 A premium, modern 6-page static web application built with **React**, **Vite**, **Tailwind CSS**, and **Lucide Icons**, redesigned with **NEBOSH-inspired Royal Navy Blue and Crisp White corporate palette** and **"Helvetica Neue", Helvetica, Arial, sans-serif** typography.
 
@@ -71,7 +71,7 @@ npm run preview
 ## 🛡️ Business Profile & Requirements Checklist
 
 - **Name**: SANTOSH
-- **Full Name**: Specialised Academy for NextGen Trainings in Occupational Health and Safety
+- **Full Name**: Specialised Academy for NextGen Trainings in Occupational Safety and Health
 - **Core Programs**:
   1. HSE Training
   2. Fire & Safety Training

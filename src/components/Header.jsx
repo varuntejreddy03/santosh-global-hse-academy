@@ -48,15 +48,14 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
             {/* Brand Logo */}
             <button 
               onClick={() => handleNavClick('home')}
-              className="flex items-center gap-2 sm:gap-3.5 text-left group focus:outline-none cursor-pointer min-w-0 shrink"
+              className="flex items-center gap-2 text-left group focus:outline-none cursor-pointer min-w-0 shrink py-1"
+              aria-label="SANTOSH Global HSE Academy Home"
             >
-              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg bg-[#00A6B4] flex items-center justify-center shadow-md group-hover:bg-[#063B78] transition-colors shrink-0">
-                <ShieldCheck className="w-4.5 h-4.5 sm:w-6 sm:h-6 text-white stroke-[2.4]" />
-              </div>
-              <div className="min-w-0">
-                <span className="block text-lg sm:text-2xl font-extrabold tracking-tight text-[#063B78] leading-none">SANTOSH</span>
-                <span className="block text-[10px] sm:text-xs font-semibold text-[#00A6B4] leading-tight mt-0.5">Global HSE Academy</span>
-              </div>
+              <img 
+                src="/images/santosh-logo-transparent.png" 
+                alt="SANTOSH Global HSE Academy" 
+                className="h-8.5 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+              />
             </button>
 
             {/* Desktop Navigation Links */}
@@ -107,9 +106,12 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
         {/* Mobile Drawer Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-2xl animate-in slide-in-from-top duration-200 max-h-[calc(100vh-80px)] overflow-y-auto">
-            <div className="py-2.5 px-3.5 rounded-lg bg-[#F3F8FC] text-xs text-slate-600 mb-3 border border-[#d6e6f3]">
-              <p className="font-bold text-[#063B78] mb-0.5">SANTOSH Global HSE Academy</p>
-              <p className="text-[11px] text-slate-600">ASP® · CSP® · CRSP® Examination Preparation</p>
+            <div className="py-2.5 px-3 rounded-xl bg-[#F3F8FC] text-xs text-slate-600 mb-3 border border-[#d6e6f3] flex items-center gap-3">
+              <img src="/images/santosh-shield-transparent.png" alt="SANTOSH Shield" className="h-9 w-auto object-contain shrink-0" />
+              <div className="min-w-0">
+                <p className="font-bold text-[#063B78] text-xs">SANTOSH Global HSE Academy</p>
+                <p className="text-[10px] text-slate-600 font-medium leading-tight mt-0.5">Specialised Academy for NextGen Trainings in Occupational Safety and Health</p>
+              </div>
             </div>
 
             {navLinks.map((link) => {

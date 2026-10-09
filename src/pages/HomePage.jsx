@@ -80,7 +80,7 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
       <section className="bg-gradient-to-r from-[#00A6B4] to-[#0757B8] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-center">
           <p className="text-lg sm:text-2xl font-extrabold text-white">
-            SANTOSH — Specialised Academy for NextGen Trainings in Occupational Health and Safety
+            SANTOSH — Specialised Academy for NextGen Trainings in Occupational Safety and Health
           </p>
           <p className="mt-1 text-sm font-medium text-white/90">Business hours 24/7 · Accessible all over the world</p>
         </div>
