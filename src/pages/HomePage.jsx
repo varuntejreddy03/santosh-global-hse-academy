@@ -2,7 +2,7 @@ import React from 'react';
 import {
   ArrowRight, Download, Check, Star, Users, Laptop, FileCheck, UserCheck,
   BookOpen, Globe2, Lightbulb, FileText, BarChart3, Target, Trophy,
-  ShieldCheck, GraduationCap, Award, ChevronRight,
+  ShieldCheck, GraduationCap, Award, ChevronRight, Globe,
 } from 'lucide-react';
 import {
   ACADEMY_INFO, CORE_PROGRAMS, EXAM_PREP_PROGRAMS, BENEFITS, JOURNEY_STEPS, WHY_US_POINTS,
@@ -30,49 +30,99 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
   return (
     <div className="bg-white">
       {/* 4. HERO */}
-      <section className="relative isolate overflow-hidden bg-[#063B78] text-white">
+      <section className="relative isolate overflow-hidden bg-[#031B38] text-white">
         <img
           src={ACADEMY_INFO.heroImage}
           alt="Safety professional in white helmet and hi-vis vest in industrial refinery at golden hour"
           className="absolute inset-0 -z-20 h-full w-full object-cover object-right"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#063B78] via-[#063B78]/90 to-[#063B78]/30" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24">
-          <p className="text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#18C6D9]">BUILD A SAFER TOMORROW</p>
-          <h1 className="mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-white">
-            GLOBAL HSE<br />CERTIFICATIONS
-          </h1>
-          <p className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#18C6D9]">
-            ASP® • CSP® • CRSP®
-          </p>
-          <p className="mt-5 text-lg sm:text-xl font-semibold text-white">
-            Focused training. Expert guidance. Exam success.
-          </p>
-          <p className="mt-3 max-w-xl text-sm sm:text-base text-slate-200 leading-relaxed">
-            Structured preparation designed to help safety professionals build knowledge,
-            confidence and exam readiness for professional safety certification examinations.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <button onClick={scrollToPrograms} className="btn-orange">
-              Explore Courses <ArrowRight className="w-4 h-4" />
-            </button>
-            <button onClick={() => enquire()} className="btn-outline-light">
-              <Download className="w-4 h-4" /> Download Brochure
-            </button>
+        {/* Cinematic rich gradient overlay that keeps text on left high-contrast and lets refinery on right shine through */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#031B38] via-[#031B38]/95 sm:via-[#031B38]/85 md:via-[#031B38]/75 to-transparent" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 pb-14 sm:pb-18 lg:pb-22">
+          <div className="max-w-3xl">
+            {/* Eyebrow */}
+            <p className="text-xs sm:text-sm font-bold tracking-[0.25em] text-[#18C6D9] uppercase mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#18C6D9] animate-pulse" />
+              BUILD YOUR GLOBAL HSE CAREER
+            </p>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-extrabold leading-[1.08] text-white tracking-tight">
+              Professional HSE<br />
+              Training for a<br />
+              <span className="text-[#FF7A00]">Safer World</span>
+            </h1>
+
+            {/* Certifications Subheading */}
+            <div className="mt-4 sm:mt-5">
+              <p className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#18C6D9] tracking-tight">
+                ASP® <span className="text-white/40 font-light mx-1">|</span> CSP® <span className="text-white/40 font-light mx-1">|</span> CRSP®
+              </p>
+              <p className="mt-1 text-base sm:text-lg font-semibold text-slate-100">
+                Exam Preparation &amp; Professional HSE Training
+              </p>
+            </div>
+
+            {/* Pillars line */}
+            <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs sm:text-sm font-medium text-slate-200">
+              <span className="text-slate-100">Structured learning</span>
+              <span className="text-[#FF7A00] font-black">•</span>
+              <span className="text-slate-100">Expert instruction</span>
+              <span className="text-[#FF7A00] font-black">•</span>
+              <span className="text-slate-100">Mock examinations</span>
+              <span className="text-[#FF7A00] font-black">•</span>
+              <span className="text-slate-100">Career-focused guidance</span>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              <button
+                onClick={scrollToPrograms}
+                className="inline-flex items-center gap-2 rounded-xl bg-[#FF7A00] hover:bg-[#E66D00] text-white px-6 sm:px-7 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-lg shadow-orange-500/30 transition-all hover:-translate-y-0.5 cursor-pointer"
+              >
+                <span>EXPLORE PROGRAMS</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
+              </button>
+              <button
+                onClick={() => enquire('Talk to an Advisor')}
+                className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md text-white px-6 sm:px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all hover:-translate-y-0.5 cursor-pointer"
+              >
+                <span>TALK TO AN ADVISOR</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
+              </button>
+            </div>
+
+            {/* Trust Location Bar */}
+            <div className="mt-8 pt-5 border-t border-white/15 flex flex-wrap items-center gap-2 text-xs sm:text-sm text-slate-200">
+              <Globe className="w-4 h-4 text-[#18C6D9] shrink-0" />
+              <span className="font-semibold text-white">Online &amp; Classroom Training</span>
+              <span className="text-white/40 mx-1 hidden sm:inline">|</span>
+              <span className="text-slate-300">India · Middle East · Africa · Worldwide</span>
+            </div>
           </div>
-          <ul className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl text-sm">
+        </div>
+
+        {/* Feature Icons Strip Bar directly below Hero (from screenshot) */}
+        <div className="border-t border-white/10 bg-white/95 backdrop-blur-md text-[#063B78]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
-              [Users, 'Instructor-Led Training'],
-              [Laptop, 'Flexible Learning Modes'],
-              [FileCheck, 'Mock Exams & Review'],
-              [UserCheck, 'Expert Mentorship'],
-            ].map(([Icon, label]) => (
-              <li key={label} className="flex items-center gap-2 text-slate-100">
-                <Icon className="w-5 h-5 text-[#18C6D9] shrink-0" />
-                <span className="font-medium">{label}</span>
-              </li>
+              { icon: Users, title: 'Instructor-Led Training', desc: 'Expert HSE Specialists' },
+              { icon: Target, title: 'Exam-Focused Practice', desc: 'ASP® · CSP® · CRSP® Blueprints' },
+              { icon: Laptop, title: 'Flexible Learning', desc: 'Live Virtual & Classroom' },
+              { icon: Globe2, title: 'Global Recognition', desc: 'India · Gulf · Africa · Global' },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="flex items-center gap-3">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#00A6B4]/10 text-[#00A6B4] flex items-center justify-center shrink-0 shadow-xs">
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-extrabold text-[#063B78] leading-tight truncate">{title}</p>
+                  <p className="text-[11px] sm:text-xs text-slate-500 font-medium leading-tight mt-0.5 truncate">{desc}</p>
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
