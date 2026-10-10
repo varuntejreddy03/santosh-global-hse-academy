@@ -23,84 +23,148 @@ const TONES = {
   orange: { bar: 'bg-[#FF6A00]', tint: 'from-[#FFF7ED]', text: 'text-[#FF6A00]', badge: 'bg-[#FF6A00]/10 text-[#C2410C]', btn: 'bg-[#FF6A00] hover:bg-[#EA580C]', tick: 'text-[#FF6A00]' },
 };
 
-export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
+export default function HomePage({ setCurrentPage, onOpenEnquireModal, colorTheme = 'plum', setColorTheme }) {
   const scrollToPrograms = () =>
     document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' });
   const enquire = (title = '') => onOpenEnquireModal(title);
 
+  const isPlum = colorTheme === 'plum';
+
+  // IOSH Theme configuration:
+  // Plum: Exact IOSH British Royal Plum (#3E1457) from client screenshot
+  // Navy: Executive Royal Indigo-Navy (#0B2545 / #162052) matched to SANTOSH logo
+  const themeCard = isPlum ? {
+    cardBg: 'bg-[#3E1457]',
+    cardBorder: 'border-[#551E75]',
+    cardHighlight: 'text-[#E9D5FF]',
+    btnSolid: 'bg-white text-[#3E1457] hover:bg-slate-100',
+    taglineRibbon: 'bg-gradient-to-r from-[#260C38] via-[#3E1457] to-[#1D55B2]',
+    taglineBadge: 'text-[#FF6A00]',
+    cardBadge: 'bg-white/15 text-white',
+  } : {
+    cardBg: 'bg-[#0B2545]',
+    cardBorder: 'border-slate-700/60',
+    cardHighlight: 'text-sky-200',
+    btnSolid: 'bg-white text-[#0B2545] hover:bg-slate-100',
+    taglineRibbon: 'bg-gradient-to-r from-[#04162E] via-[#0B2545] to-[#133E7C]',
+    taglineBadge: 'text-[#38BDF8]',
+    cardBadge: 'bg-white/15 text-white',
+  };
+
   return (
     <div className="bg-white">
-      {/* 4. HERO */}
-      <section className="relative isolate overflow-hidden bg-[#04162E] text-white">
+      {/* 4. HERO — IOSH CHARTERED STYLE SPLIT CARD */}
+      <section className="relative isolate overflow-hidden bg-slate-900 text-white">
+        {/* Background photo: Industrial workplace showing safety professionals on right */}
         <img
           src={ACADEMY_INFO.heroImage}
-          alt="Safety professional in white helmet and hi-vis vest in industrial refinery at golden hour"
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-right"
+          alt="Safety professional in white helmet and hi-vis vest in industrial refinery"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[75%_center] lg:object-right"
         />
-        {/* Cinematic rich gradient overlay that keeps text on left high-contrast and lets refinery on right shine through */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#04162E] via-[#04162E]/95 sm:via-[#04162E]/85 md:via-[#04162E]/75 to-transparent" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 pb-14 sm:pb-18 lg:pb-22">
-          <div className="max-w-3xl">
-            {/* Eyebrow */}
-            <p className="text-xs sm:text-sm font-bold tracking-[0.25em] text-[#38BDF8] uppercase mb-3 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse" />
-              BUILD YOUR GLOBAL HSE CAREER
-            </p>
+        {/* Cinematic gradient overlay: keeps left dark for card anchoring while showing photo on right */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/50 via-black/20 to-transparent hidden lg:block" />
+        <div className="absolute inset-0 -z-10 bg-slate-950/65 lg:hidden" />
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-extrabold leading-[1.08] text-white tracking-tight">
-              Professional HSE<br />
-              Training for a<br />
-              <span className="text-[#FF6A00]">Safer World</span>
-            </h1>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 lg:py-18">
+          <div className="grid lg:grid-cols-12 gap-8 items-center">
+            
+            {/* SOLID IOSH-STYLE FEATURE CARD (Left Block) */}
+            <div className="lg:col-span-7 xl:col-span-6">
+              <div className={`rounded-2xl p-6 sm:p-9 lg:p-10 shadow-2xl border ${themeCard.cardBorder} ${themeCard.cardBg} transition-all duration-300 relative overflow-hidden backdrop-blur-xs`}>
+                
+                {/* Subtle top accent bar */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#FF6A00] via-[#38BDF8] to-[#1D4ED8]" />
 
-            {/* Certifications Subheading */}
-            <div className="mt-4 sm:mt-5">
-              <p className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#38BDF8] tracking-tight">
-                ASP® <span className="text-white/40 font-light mx-1">|</span> CSP® <span className="text-white/40 font-light mx-1">|</span> CRSP®
-              </p>
-              <p className="mt-1 text-base sm:text-lg font-semibold text-slate-100">
-                Exam Preparation &amp; Professional HSE Training
-              </p>
+                {/* Eyebrow & Palette Switcher Pill */}
+                <div className="flex items-center justify-between gap-2 mb-4 flex-wrap">
+                  <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full ${themeCard.cardBadge} text-[11px] font-bold tracking-widest uppercase`}>
+                    <span className="w-2 h-2 rounded-full bg-[#FF6A00] animate-pulse" />
+                    BUILD YOUR GLOBAL HSE CAREER
+                  </div>
+
+                  {setColorTheme && (
+                    <div className="inline-flex items-center gap-1 bg-black/30 p-0.5 rounded-full text-[10px] font-bold border border-white/15">
+                      <button
+                        onClick={() => setColorTheme('plum')}
+                        className={`px-2.5 py-0.5 rounded-full transition-all cursor-pointer ${isPlum ? 'bg-[#FF6A00] text-white shadow-xs' : 'text-white/70 hover:text-white'}`}
+                        title="Exact IOSH Royal Plum Palette"
+                      >
+                        IOSH Plum
+                      </button>
+                      <button
+                        onClick={() => setColorTheme('navy')}
+                        className={`px-2.5 py-0.5 rounded-full transition-all cursor-pointer ${!isPlum ? 'bg-[#1D4ED8] text-white shadow-xs' : 'text-white/70 hover:text-white'}`}
+                        title="Direct Logo-Matched Royal Navy Palette"
+                      >
+                        Logo Navy
+                      </button>
+                    </div>
+                  )}
+                </div>
+
+                {/* Main Headline (Exact IOSH Layout & Authority) */}
+                <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold leading-[1.12] text-white tracking-tight">
+                  Become a Recognised<br />
+                  <span className="text-[#FF6A00]">Safety Professional</span>
+                </h1>
+
+                {/* Certifications Subheading */}
+                <div className="mt-3.5">
+                  <p className="text-xl sm:text-2xl font-black text-[#38BDF8] tracking-tight">
+                    ASP® <span className="text-white/40 font-light mx-1">|</span> CSP® <span className="text-white/40 font-light mx-1">|</span> CRSP®
+                  </p>
+                  <p className="mt-0.5 text-xs sm:text-sm font-semibold text-slate-100">
+                    Exam Preparation &amp; Professional HSE Coaching
+                  </p>
+                </div>
+
+                {/* Subtext Paragraph */}
+                <p className="mt-3 text-xs sm:text-sm text-slate-200 leading-relaxed">
+                  Join safety professionals worldwide gaining knowledge, certification readiness and credibility to build safer workplaces.
+                </p>
+
+                {/* Pillars line */}
+                <div className="mt-4 pt-3.5 border-t border-white/15 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-200">
+                  <span className="text-white font-semibold">Structured learning</span>
+                  <span className="text-[#FF6A00] font-black">•</span>
+                  <span className="text-white font-semibold">Expert instruction</span>
+                  <span className="text-[#FF6A00] font-black">•</span>
+                  <span className="text-white font-semibold">Mock examinations</span>
+                  <span className="text-[#FF6A00] font-black">•</span>
+                  <span className="text-white font-semibold">Career guidance</span>
+                </div>
+
+                {/* Dual Action Buttons (Exact IOSH Style: Solid White + Transparent Outline) */}
+                <div className="mt-7 flex flex-wrap items-center gap-3">
+                  <button
+                    onClick={scrollToPrograms}
+                    className={`inline-flex items-center justify-center gap-2 rounded-xl px-6 sm:px-7 py-3.5 text-xs sm:text-sm font-black uppercase tracking-wider ${themeCard.btnSolid} shadow-xl hover:shadow-2xl transition-all hover:-translate-y-0.5 cursor-pointer`}
+                  >
+                    <span>EXPLORE PROGRAMS</span>
+                    <ArrowRight className="w-4 h-4 stroke-[2.5]" />
+                  </button>
+                  <button
+                    onClick={() => enquire('Talk to an Advisor')}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-transparent hover:bg-white/15 border-2 border-white text-white px-6 sm:px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all hover:-translate-y-0.5 cursor-pointer"
+                  >
+                    <span>TALK TO AN ADVISOR</span>
+                    <ArrowRight className="w-4 h-4 stroke-[2.5]" />
+                  </button>
+                </div>
+
+                {/* Trust Location Bar inside card */}
+                <div className="mt-6 pt-3.5 border-t border-white/15 flex flex-wrap items-center gap-2 text-[11px] sm:text-xs text-slate-200">
+                  <Globe className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
+                  <span className="font-semibold text-white">Online &amp; Classroom Training</span>
+                  <span className="text-white/40 mx-1 hidden sm:inline">|</span>
+                  <span className="text-slate-300">India · Middle East · Africa · Worldwide</span>
+                </div>
+              </div>
             </div>
 
-            {/* Pillars line */}
-            <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs sm:text-sm font-medium text-slate-200">
-              <span className="text-slate-100">Structured learning</span>
-              <span className="text-[#FF6A00] font-black">•</span>
-              <span className="text-slate-100">Expert instruction</span>
-              <span className="text-[#FF6A00] font-black">•</span>
-              <span className="text-slate-100">Mock examinations</span>
-              <span className="text-[#FF6A00] font-black">•</span>
-              <span className="text-slate-100">Career-focused guidance</span>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-3.5">
-              <button
-                onClick={scrollToPrograms}
-                className="inline-flex items-center gap-2 rounded-xl bg-[#FF6A00] hover:bg-[#EA580C] text-white px-6 sm:px-7 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider shadow-lg shadow-orange-500/30 transition-all hover:-translate-y-0.5 cursor-pointer"
-              >
-                <span>EXPLORE PROGRAMS</span>
-                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
-              </button>
-              <button
-                onClick={() => enquire('Talk to an Advisor')}
-                className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md text-white px-6 sm:px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all hover:-translate-y-0.5 cursor-pointer"
-              >
-                <span>TALK TO AN ADVISOR</span>
-                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
-              </button>
-            </div>
-
-            {/* Trust Location Bar */}
-            <div className="mt-8 pt-5 border-t border-white/15 flex flex-wrap items-center gap-2 text-xs sm:text-sm text-slate-200">
-              <Globe className="w-4 h-4 text-[#38BDF8] shrink-0" />
-              <span className="font-semibold text-white">Online &amp; Classroom Training</span>
-              <span className="text-white/40 mx-1 hidden sm:inline">|</span>
-              <span className="text-slate-300">India · Middle East · Africa · Worldwide</span>
-            </div>
+            {/* Right side area gives space so the industrial safety professional photo shines through on desktop */}
+            <div className="hidden lg:block lg:col-span-5 xl:col-span-6" />
           </div>
         </div>
 
@@ -114,7 +178,7 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
               { icon: Globe2, title: 'Global Recognition', desc: 'India · Gulf · Africa · Global' },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="flex items-center gap-3">
-                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#1D4ED8]/10 text-[#1D4ED8] flex items-center justify-center shrink-0 shadow-xs">
+                <div className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center shrink-0 shadow-xs ${isPlum ? 'bg-[#3E1457]/10 text-[#3E1457]' : 'bg-[#1D4ED8]/10 text-[#1D4ED8]'}`}>
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                 </div>
                 <div className="min-w-0">
@@ -128,10 +192,10 @@ export default function HomePage({ setCurrentPage, onOpenEnquireModal }) {
       </section>
 
       {/* Academy tagline ribbon (highlighted) */}
-      <section className="bg-gradient-to-r from-[#04162E] via-[#0B2545] to-[#133E7C] text-white border-y border-white/10 shadow-inner">
+      <section className={`${themeCard.taglineRibbon} text-white border-y border-white/10 shadow-inner transition-colors duration-300`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 text-center">
           <p className="text-lg sm:text-2xl font-extrabold text-white tracking-tight">
-            <span className="text-[#38BDF8]">SANTOSH</span> — Specialised Academy for NextGen Trainings in Occupational Safety and Health
+            <span className={themeCard.taglineBadge}>SANTOSH</span> — Specialised Academy for NextGen Trainings in Occupational Safety and Health
           </p>
           <div className="mt-2 flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 text-xs sm:text-sm font-medium text-slate-200">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-white backdrop-blur-sm border border-white/15">

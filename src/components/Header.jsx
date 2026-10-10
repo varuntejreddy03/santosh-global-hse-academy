@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { ACADEMY_INFO } from '../data/academyData';
 
-export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal }) {
+export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal, colorTheme = 'plum', setColorTheme }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -40,51 +40,59 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
     }
   };
 
+  const isPlum = colorTheme === 'plum';
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
-        {/* Top information strip */}
-        <div className="bg-[#04162E] text-white py-1.5 sm:py-2 px-3 sm:px-6 text-[11px] font-medium border-b border-white/10 w-full max-w-full overflow-hidden">
-          <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        {/* Top information strip (IOSH-style Royal Blue Service Bar) */}
+        <div className="bg-[#1D55B2] text-white py-1.5 sm:py-2 px-3 sm:px-6 text-[11px] font-medium border-b border-white/10 w-full max-w-full overflow-hidden">
+          <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
             {/* Left Items */}
-            <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
-              <span className="inline-flex items-center gap-1.5 text-slate-200">
-                <Globe className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
-                <span>Global HSE Learning</span>
+            <div className="flex items-center gap-2.5 sm:gap-4 flex-wrap">
+              <span className="inline-flex items-center gap-1.5 text-white font-bold">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>24/7 Training Desk:</span>
               </span>
-              <span className="text-white/20 hidden sm:inline">|</span>
-              <span className="inline-flex items-center gap-1.5 text-slate-200">
-                <Laptop className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
-                <span>Online &amp; Classroom</span>
+              <span className="text-white/90 hidden sm:inline">
+                ASP®, CSP® &amp; CRSP® Coaching &bull; Live Virtual &amp; Classroom Worldwide
               </span>
-              <span className="text-white/20 hidden md:inline">|</span>
-              <span className="inline-flex items-center gap-1.5 text-slate-300 hidden md:inline-flex">
-                <MapPin className="w-3.5 h-3.5 text-[#FF6A00] shrink-0" />
-                <span>India · Middle East · Africa · Worldwide</span>
+              <span className="text-white/30 hidden md:inline">|</span>
+              <span className="text-sky-100 hidden md:inline">
+                India &bull; Middle East &bull; Africa &bull; Worldwide
               </span>
             </div>
 
             {/* Right Items */}
-            <div className="flex items-center gap-3.5 shrink-0">
+            <div className="flex items-center gap-3 shrink-0">
+              {/* Palette Switcher Button */}
+              {setColorTheme && (
+                <div className="inline-flex items-center gap-1 bg-black/25 px-2 py-0.5 rounded-full text-[10px] font-bold border border-white/15">
+                  <span className="text-white/70 hidden sm:inline mr-0.5">Style:</span>
+                  <button
+                    onClick={() => setColorTheme('plum')}
+                    className={`px-2 py-0.5 rounded-full transition-all cursor-pointer ${isPlum ? 'bg-[#3E1457] text-white shadow-xs' : 'text-white/80 hover:text-white'}`}
+                    title="Exact IOSH Royal Plum Palette"
+                  >
+                    IOSH Plum
+                  </button>
+                  <button
+                    onClick={() => setColorTheme('navy')}
+                    className={`px-2 py-0.5 rounded-full transition-all cursor-pointer ${!isPlum ? 'bg-[#0B2545] text-white shadow-xs' : 'text-white/80 hover:text-white'}`}
+                    title="Direct Logo-Matched Royal Navy Palette"
+                  >
+                    Logo Navy
+                  </button>
+                </div>
+              )}
+
               <a 
                 href="mailto:info@santosh-global-hse-academy.com" 
-                className="inline-flex items-center gap-1.5 text-slate-200 hover:text-[#38BDF8] transition-colors"
+                className="hidden lg:inline-flex items-center gap-1.5 text-white hover:text-sky-200 transition-colors"
               >
-                <Mail className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
-                <span className="hidden sm:inline">info@santosh-global-hse-academy.com</span>
+                <Mail className="w-3.5 h-3.5 text-sky-200 shrink-0" />
+                <span className="hidden xl:inline">info@santosh-global-hse-academy.com</span>
               </a>
-              {/* Social icons */}
-              <div className="flex items-center gap-2.5 text-slate-300 pl-1">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#38BDF8] transition-colors" aria-label="LinkedIn">
-                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.67 1.67 0 1 0 0-3.34 1.67 1.67 0 0 0 0 3.34m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
-                </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6A00] transition-colors" aria-label="YouTube">
-                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.26 5 12 5 12 5s-6.26 0-7.82.42A2.5 2.5 0 0 0 2.42 7.2 26.2 26.2 0 0 0 2 12a26.2 26.2 0 0 0 .42 4.81 2.5 2.5 0 0 0 1.76 1.77C5.74 19 12 19 12 19s6.26 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77C22 15.82 22 12 22 12s0-3.82-.42-4.81zM9.75 15.02V8.98L15 12l-5.25 3.02z"/></svg>
-                </a>
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="X (Twitter)">
-                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -116,13 +124,13 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
                     onClick={() => handleNavClick(link.id, link.target)}
                     className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors relative cursor-pointer ${
                       isActive 
-                        ? 'text-[#0B2545] bg-[#F8FAFC]' 
+                        ? (isPlum ? 'text-[#3E1457] bg-purple-50/70' : 'text-[#0B2545] bg-[#F8FAFC]')
                         : 'text-slate-700 hover:text-[#1D4ED8] hover:bg-slate-50'
                     }`}
                   >
                     {link.label}
                     {isActive && (
-                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#1D4ED8] rounded-full"></span>
+                      <span className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full ${isPlum ? 'bg-[#3E1457]' : 'bg-[#1D4ED8]'}`}></span>
                     )}
                   </button>
                 );
@@ -133,7 +141,11 @@ export default function Header({ currentPage, setCurrentPage, onOpenEnquireModal
             <div className="flex items-center gap-2 sm:gap-3 shrink-0">
               <button
                 onClick={() => onOpenEnquireModal()}
-                className="hidden md:inline-flex items-center gap-2 rounded-xl bg-[#FF6A00] hover:bg-[#EA580C] text-white text-xs font-black tracking-wider uppercase px-4 lg:px-5 py-2.5 sm:py-3 shadow-md shadow-orange-500/20 hover:shadow-orange-500/35 transition-all cursor-pointer"
+                className={`hidden md:inline-flex items-center gap-2 rounded-xl text-white text-xs font-black tracking-wider uppercase px-4 lg:px-5 py-2.5 sm:py-3 shadow-md transition-all cursor-pointer ${
+                  isPlum 
+                    ? 'bg-[#3E1457] hover:bg-[#4E1A6E] shadow-purple-900/20 hover:shadow-purple-900/35'
+                    : 'bg-[#FF6A00] hover:bg-[#EA580C] shadow-orange-500/20 hover:shadow-orange-500/35'
+                }`}
               >
                 <span>ENQUIRE NOW</span>
                 <ArrowRight className="w-4 h-4 stroke-[2.5]" />
