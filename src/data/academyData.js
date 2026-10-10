@@ -225,7 +225,7 @@ export const EXAM_PREP_PROGRAMS = [
     title: 'CSP® Examination Preparation',
     fullName: 'Certified Safety Professional®',
     badge: 'Most Popular · Advanced',
-    tone: 'blue',
+    tone: 'orange',
     featured: true,
     image: '/images/card_csp.jpg',
     imageAlt: 'Experienced senior safety professional wearing white hard hat and safety glasses',
@@ -243,7 +243,7 @@ export const EXAM_PREP_PROGRAMS = [
     title: 'CRSP® Examination Preparation',
     fullName: 'Canadian Registered Safety Professional®',
     badge: 'Canada Focused',
-    tone: 'orange',
+    tone: 'blue',
     image: '/images/card_crsp.jpg',
     imageAlt: 'Canadian occupational health and safety professional with protective equipment',
     points: [

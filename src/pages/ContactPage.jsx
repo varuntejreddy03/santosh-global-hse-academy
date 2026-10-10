@@ -32,7 +32,7 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
         accent="exam-preparation journey"
         text="Tell us which examination you are preparing for and our team will guide you on the right program."
       />
-      <section className="bg-[#F3F8FC] py-14 sm:py-20">
+      <section className="bg-[#F8FAFC] py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 lg:grid-cols-[1fr_1.6fr]">
           <div className="space-y-4">
             {[
@@ -41,16 +41,16 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
               [Users, 'Dedicated Learner Support', 'Personal guidance from enquiry through to exam day.'],
             ].map(([Icon, t, d]) => (
               <div key={t} className="flex gap-4 rounded-2xl bg-white border border-slate-200 p-5">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e6f7f9] text-[#00A6B4]"><Icon className="w-5 h-5" /></div>
-                <div><p className="font-bold text-[#063B78]">{t}</p><p className="text-sm text-slate-600">{d}</p></div>
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50/80 text-[#1D4ED8]"><Icon className="w-5 h-5" /></div>
+                <div><p className="font-bold text-[#0B2545]">{t}</p><p className="text-sm text-slate-600">{d}</p></div>
               </div>
             ))}
           </div>
           <div className="rounded-2xl bg-white border border-slate-200 p-6 sm:p-10 shadow-lg">
             {submitted ? (
               <div className="py-12 text-center space-y-5">
-                <CheckCircle2 className="w-16 h-16 mx-auto text-[#00A6B4]" />
-                <h3 className="text-2xl font-bold text-[#063B78]">Thank You, {formData.name}</h3>
+                <CheckCircle2 className="w-16 h-16 mx-auto text-[#1D4ED8]" />
+                <h3 className="text-2xl font-bold text-[#0B2545]">Thank You, {formData.name}</h3>
                 <p className="text-sm text-slate-700 max-w-md mx-auto">
                   Your enquiry regarding <strong>{formData.interestedTraining}</strong> has been received. We will contact you at {formData.email}.
                 </p>
@@ -59,7 +59,7 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="space-y-1">
-                      <h3 className="text-xl font-bold text-[#063B78]">
+                      <h3 className="text-xl font-bold text-[#0B2545]">
                         Enquiry Form
                       </h3>
                       <p className="text-xs text-slate-500 font-normal">
@@ -78,7 +78,7 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. John Doe"
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all placeholder:text-slate-400 shadow-sm"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all placeholder:text-slate-400 shadow-sm"
                       />
                     </div>
 
@@ -94,7 +94,7 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="john@example.com"
-                          className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all placeholder:text-slate-400 shadow-sm"
+                          className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all placeholder:text-slate-400 shadow-sm"
                         />
                       </div>
                       <div>
@@ -107,7 +107,7 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+1 234 567 890"
-                          className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all placeholder:text-slate-400 shadow-sm"
+                          className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all placeholder:text-slate-400 shadow-sm"
                         />
                       </div>
                     </div>
@@ -124,7 +124,7 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
                           value={formData.organisation}
                           onChange={(e) => setFormData({ ...formData, organisation: e.target.value })}
                           placeholder="Company or Freelance"
-                          className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all placeholder:text-slate-400 shadow-sm"
+                          className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all placeholder:text-slate-400 shadow-sm"
                         />
                       </div>
                       <div>
@@ -134,7 +134,7 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
                         <select
                           value={formData.interestedTraining}
                           onChange={(e) => setFormData({ ...formData, interestedTraining: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all cursor-pointer shadow-sm"
+                          className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all cursor-pointer shadow-sm"
                         >
                           {EXAM_PREP_PROGRAMS.map((prog) => (
                             <option key={prog.id} value={prog.title}>
@@ -162,7 +162,7 @@ export default function ContactPage({ setCurrentPage, onShowToast }) {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Please specify your training objectives, team size, or preferred timeline..."
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all placeholder:text-slate-400 shadow-sm"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-800 focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all placeholder:text-slate-400 shadow-sm"
                       ></textarea>
                     </div>
 

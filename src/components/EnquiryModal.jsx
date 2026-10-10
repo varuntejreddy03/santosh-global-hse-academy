@@ -47,8 +47,8 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
         className="relative w-full max-w-xl max-h-[92vh] flex flex-col bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Top Header: NEBOSH Deep Navy Blue with Inset Ribbon */}
-        <div className="bg-[#063B78] text-white px-6 py-4 flex items-center justify-between border-b border-[#052d5c] flex-shrink-0">
+        {/* Top Header: Deep Executive Oxford Navy */}
+        <div className="bg-[#04162E] text-white px-6 py-4 flex items-center justify-between border-b border-white/10 flex-shrink-0">
           <div className="flex items-center gap-3">
             <div className="h-9 w-9 rounded-lg bg-white p-1 flex items-center justify-center shadow-sm">
               <img src="/images/santosh-shield-transparent.png" alt="SANTOSH" className="h-7 w-auto object-contain" />
@@ -74,10 +74,10 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
         <div className="p-6 sm:p-7 overflow-y-auto flex-1">
           {submitted ? (
             <div className="py-8 text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-[#F3F8FC] border border-[#7bbbd1] text-[#063B78] mx-auto flex items-center justify-center shadow-sm">
+              <div className="w-16 h-16 rounded-full bg-blue-50 border border-blue-200 text-[#1D4ED8] mx-auto flex items-center justify-center shadow-sm">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
-              <h4 className="text-xl font-bold text-[#063B78]">
+              <h4 className="text-xl font-bold text-[#0B2545]">
                 Enquiry Successfully Received
               </h4>
               <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
@@ -109,7 +109,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alexander Vance"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all placeholder:text-slate-400 shadow-sm"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all placeholder:text-slate-400 shadow-sm"
                   />
                 </div>
                 <div>
@@ -122,7 +122,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alexander@company.com"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all placeholder:text-slate-400 shadow-sm"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all placeholder:text-slate-400 shadow-sm"
                   />
                 </div>
               </div>
@@ -137,7 +137,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+1 555-019-2834"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all placeholder:text-slate-400 shadow-sm"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all placeholder:text-slate-400 shadow-sm"
                   />
                 </div>
                 <div>
@@ -149,7 +149,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
                     value={formData.organisation}
                     onChange={(e) => setFormData({ ...formData, organisation: e.target.value })}
                     placeholder="Company or Independent"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all placeholder:text-slate-400 shadow-sm"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all placeholder:text-slate-400 shadow-sm"
                   />
                 </div>
               </div>
@@ -161,7 +161,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
                 <select
                   value={formData.interestedTraining}
                   onChange={(e) => setFormData({ ...formData, interestedTraining: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all cursor-pointer shadow-sm"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all cursor-pointer shadow-sm"
                 >
                   {EXAM_PREP_PROGRAMS.map((prog) => (
                     <option key={prog.id} value={prog.title}>
@@ -188,17 +188,17 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Tell us about your team size, learning objectives, or scheduling preferences..."
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#063B78] focus:ring-2 focus:ring-[#063B78]/20 transition-all placeholder:text-slate-400 shadow-sm"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-800 text-sm focus:outline-none focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 transition-all placeholder:text-slate-400 shadow-sm"
                 ></textarea>
               </div>
 
               {/* Bottom indicators */}
               <div className="flex items-center justify-between text-[11px] text-slate-500 pt-1">
-                <span className="flex items-center gap-1.5 text-[#063B78] font-semibold">
+                <span className="flex items-center gap-1.5 text-[#0B2545] font-semibold">
                   <Clock className="w-3.5 h-3.5" /> 24/7 Availability
                 </span>
                 <span className="flex items-center gap-1.5 text-slate-600">
-                  <Globe2 className="w-3.5 h-3.5 text-[#00A6B4]" /> Worldwide Accessibility
+                  <Globe2 className="w-3.5 h-3.5 text-[#1D4ED8]" /> Worldwide Accessibility
                 </span>
               </div>
 
@@ -206,7 +206,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedProgram, onSu
                 <button
                   type="submit"
                   disabled={loading}
-                  className="btn-primary w-full py-3.5 text-sm font-bold flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="btn-orange w-full py-3.5 text-sm font-bold flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                 >
                   <Send className="w-4 h-4 stroke-[2.5]" />
                   <span>{loading ? 'Submitting Enquiry...' : 'Send Enquiry'}</span>
